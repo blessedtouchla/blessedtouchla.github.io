@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="description" content="Blessed Essentials – Mobile AromaTouch Technique by doTERRA. We come to you with pure essential oils for gentle relaxation.">
-  <meta name="keywords" content="AromaTouch Los Angeles, doTERRA AromaTouch, mobile essential oil therapy, gentle aromatherapy West LA">
+  <meta name="description" content="Blessed Essentials – Mobile AromaTouch Technique by doTERRA in West Los Angeles. We come to you with pure essential oils for gentle, profound relaxation and stress relief.">
+  <meta name="keywords" content="AromaTouch Los Angeles, doTERRA AromaTouch, mobile essential oil therapy Los Angeles, AromaTouch near me, aromatherapy session West LA, gentle essential oil touch therapy">
   <title>Blessed Essentials | Mobile AromaTouch Technique by doTERRA • West LA</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -23,6 +23,13 @@
     }
     .oil-card { transition: all 0.3s ease; }
     .oil-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+    @media (max-width: 640px) {
+      .hero-bg { background-position: center 30%; min-height: 100dvh; background-attachment: scroll; }
+      .hero-text { padding: 0 1rem; }
+      .scroll-prompt { bottom: 2rem !important; }
+    }
+    @supports (height: 100dvh) { .hero-bg { min-height: 100dvh; } }
+    @supports not (height: 100dvh) { .hero-bg { min-height: -webkit-fill-available; } }
   </style>
 </head>
 <body class="bg-[#f9f7f4] text-gray-800 overflow-x-hidden">
@@ -32,25 +39,29 @@
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 bg-[#d4af37] rounded-full flex items-center justify-center text-white font-bold text-2xl">B</div>
-        <div><span class="heading-font text-2xl tracking-tight gold">Blessed Essentials</span></div>
+        <div>
+          <span class="heading-font text-2xl tracking-tight gold">Blessed Essentials</span>
+        </div>
       </div>
      
       <div class="hidden md:flex items-center gap-8 text-sm font-medium">
         <a href="#about" class="hover:gold transition">The Technique</a>
         <a href="#process" class="hover:gold transition">How It Works</a>
         <a href="#oils" class="hover:gold transition">The Oils</a>
+        <a href="#deeper" class="hover:gold transition">Deeper Dive</a>
         <a href="#offer" class="hover:gold transition">Special Offer</a>
         <a href="#book" class="hover:gold transition">Book Now</a>
       </div>
      
-      <a href="#book" class="px-6 py-3 bg-[#d4af37] hover:bg-amber-600 text-white rounded-full font-semibold text-sm tracking-wider transition shadow-md">
+      <a href="#book"
+         class="px-6 py-3 bg-[#d4af37] hover:bg-amber-600 text-white rounded-full font-semibold text-sm tracking-wider transition shadow-md">
         BOOK YOUR SESSION
       </a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header class="hero-bg min-h-[100dvh] flex items-center text-white relative">
+  <header class="hero-bg min-h-[100dvh] md:h-screen flex items-center text-white relative">
     <div class="max-w-4xl mx-auto px-6 text-center z-10 hero-text">
       <div class="inline-block bg-white/90 text-gray-900 px-6 py-2 rounded-full text-sm font-medium mb-6">
         Mobile Service • Greater Los Angeles • West LA & Beyond
@@ -63,15 +74,17 @@
         <span class="text-amber-300">Gentle • Pure • Profoundly Restorative</span>
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#book" class="px-10 py-4 bg-white text-gray-900 rounded-full font-semibold text-lg hover:bg-amber-100 transition inline-flex items-center justify-center gap-2">
+        <a href="#book"
+           class="px-10 py-4 bg-white text-gray-900 rounded-full font-semibold text-lg hover:bg-amber-100 transition inline-flex items-center justify-center gap-2">
           <i class="fas fa-calendar"></i> Book Now – First Session $80
         </a>
-        <a href="#about" class="px-10 py-4 border-2 border-white rounded-full font-semibold text-lg hover:bg-white/10 transition">
+        <a href="#about"
+           class="px-10 py-4 border-2 border-white rounded-full font-semibold text-lg hover:bg-white/10 transition">
           Learn the Technique
         </a>
       </div>
       <div class="mt-12 text-sm flex items-center justify-center gap-8">
-        <div>60 Minutes • <span class="line-through text-gray-300">$160</span> Regular</div>
+        <div>60 Minutes • $80 Regular</div>
         <div class="h-1 w-1 bg-amber-300 rounded-full"></div>
         <div class="text-amber-300 font-medium">Special: First Session Only $80</div>
       </div>
@@ -96,7 +109,7 @@
             <p>Unlike deep-tissue or Swedish massage, there is no heavy pressure or muscle manipulation. You remain fully clothed from the waist down. This non-invasive method was created by Dr. David Hill to maximize the benefits of essential oils through the healing power of human touch.</p>
           </div>
           <div class="mt-10 flex items-center gap-4">
-            <a href="https://www.doterra.com/US/en/aromatouch-technique" target="_blank" 
+            <a href="https://www.doterra.com/US/en/aromatouch-technique" target="_blank"
                class="inline-flex items-center gap-2 text-amber-700 hover:text-amber-600 font-medium">
               Official doTERRA AromaTouch Page <i class="fas fa-arrow-right"></i>
             </a>
@@ -120,4 +133,254 @@
   </section>
 
   <!-- MOBILE PROCESS -->
-  <section id
+  <section id="process" class="py-20 bg-[#f9f7f4]">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="inline-block px-4 py-1.5 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full mb-4">WE COME TO YOU</span>
+        <h2 class="heading-font text-5xl leading-tight mb-4">Mobile AromaTouch – Professional & Effortless</h2>
+        <p class="max-w-2xl mx-auto text-gray-600 text-lg">Everything is provided. You simply relax in the comfort of your own home or office.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <img src="https://picsum.photos/id/201/800/600" 
+               alt="Professional mobile AromaTouch setup with portable table and essential oils"
+               class="rounded-3xl shadow-2xl w-full">
+        </div>
+        <div class="space-y-8">
+          <div class="flex gap-5">
+            <div class="w-12 h-12 bg-amber-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-3xl">👩‍⚕️</div>
+            <div>
+              <h3 class="font-semibold text-xl mb-1">Professional Practitioner</h3>
+              <p class="text-gray-600">Arrives in uniform, fully trained in the AromaTouch Technique.</p>
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <div class="w-12 h-12 bg-amber-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-3xl">🛠️</div>
+            <div>
+              <h3 class="font-semibold text-xl mb-1">Complete Setup</h3>
+              <p class="text-gray-600">Brings portable massage table, fresh towels, and the full set of pure doTERRA CPTG oils.</p>
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <div class="w-12 h-12 bg-amber-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-3xl">🌿</div>
+            <div>
+              <h3 class="font-semibold text-xl mb-1">Nothing Required from You</h3>
+              <p class="text-gray-600">Just provide a quiet space. We handle everything for your 60-minute session.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="heading-font text-5xl mb-4">What You Can Expect</h2>
+        <p class="max-w-md mx-auto text-gray-600">A profound sense of calm that lingers long after your session</p>
+      </div>
+     
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#f9f7f4] p-8 rounded-3xl">
+          <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-heart text-2xl text-amber-600"></i>
+          </div>
+          <h3 class="font-semibold text-xl mb-3">Deep Stress Relief</h3>
+          <p class="text-gray-600">Light strokes calm the nervous system and release held tension without any soreness.</p>
+        </div>
+        <div class="bg-[#f9f7f4] p-8 rounded-3xl">
+          <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-moon text-2xl text-amber-600"></i>
+          </div>
+          <h3 class="font-semibold text-xl mb-3">Profound Relaxation & Balance</h3>
+          <p class="text-gray-600">Restores harmony to body and mind through the limbic system and plant compounds.</p>
+        </div>
+        <div class="bg-[#f9f7f4] p-8 rounded-3xl">
+          <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center mb-6">
+            <i class="fas fa-shield-alt text-2xl text-amber-600"></i>
+          </div>
+          <h3 class="font-semibold text-xl mb-3">Immune & Overall Wellness Support</h3>
+          <p class="text-gray-600">The specific oils chosen by Dr. Hill work together to strengthen natural defenses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE 8 OILS -->
+  <section id="oils" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-amber-600 font-medium">8 PURE OILS • ONE BEAUTIFUL EXPERIENCE</span>
+        <h2 class="heading-font text-5xl mt-3">The Healing Oils of AromaTouch</h2>
+      </div>
+     
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="oil-card bg-[#f9f7f4] p-6 rounded-3xl text-center">
+          <div class="w-16 h-16 mx-auto bg-blue-100 rounded-2xl flex items-center justify-center mb-4 text-4xl">⚖️</div>
+          <h4 class="font-semibold mb-1">Balance</h4>
+          <p class="text-sm text-gray-600">Creates a calming atmosphere. Helps you feel grounded and centered.</p>
+        </div>
+        <div class="oil-card bg-[#f9f7f4] p-6 rounded-3xl text-center">
+          <div class="w-16 h-16 mx-auto bg-purple-100 rounded-2xl flex items-center justify-center mb-4 text-4xl">🌿</div>
+          <h4 class="font-semibold mb-1">Lavender</h4>
+          <p class="text-sm text-gray-600">Soothes & promotes relaxation. Helps you unwind.</p>
+        </div>
+        <div class="oil-card bg-[#f9f7f4] p-6 rounded-3xl text-center">
+          <div class="w-16 h-16 mx-auto bg-green-100 rounded-2xl flex items-center justify-center mb-4 text-4xl">🌱</div>
+          <h4 class="font-semibold mb-1">Melaleuca (Tea Tree)</h4>
+          <p class="text-sm text-gray-600">Cleanses & rejuvenates. Supports clear, healthy skin.</p>
+        </div>
+        <div class="oil-card bg-[#f9f7f4] p-6 rounded-3xl text-center">
+          <div class="w-16 h-16 mx-auto bg-emerald-100 rounded-2xl flex items-center justify-center mb-4 text-4xl">🛡️</div>
+          <h4 class="font-semibold mb-1">On Guard</h4>
+          <p class="text-sm text-gray-600">Supports immune health. Strengthens natural defenses.</p>
+        </div>
+        <div class="oil-card bg-[#f9f7f4] p-6 rounded-3xl text-center">
+          <div class="w-16 h-16 mx-auto bg-rose-100 rounded-2xl flex items-center justify-center mb-4 text-4xl">🌸</div>
+          <h4 class="font-semibold mb-1">AromaTouch Blend</h4>
+          <p class="text-sm text-gray-600">Provides skin comfort. Relaxes muscles and soothes tension.</p>
+        </div>
+        <div class="oil-card bg-[#f9f7f4] p-6 rounded-3xl text-center">
+          <div class="w-16 h-16 mx-auto bg-sky-100 rounded-2xl flex items-center justify-center mb-4 text-4xl">❄️</div>
+          <h4 class="font-semibold mb-1">Deep Blue</h4>
+          <p class="text-sm text-gray-600">Soothes sensations. Eases sore muscles and joint discomfort.</p>
+        </div>
+        <div class="oil-card bg-[#f9f7f4] p-6 rounded-3xl text-center">
+          <div class="w-16 h-16 mx-auto bg-orange-100 rounded-2xl flex items-center justify-center mb-4 text-4xl">🍊</div>
+          <h4 class="font-semibold mb-1">Wild Orange</h4>
+          <p class="text-sm text-gray-600">Uplifts the aroma. Boosts mood and energy.</p>
+        </div>
+        <div class="oil-card bg-[#f9f7f4] p-6 rounded-3xl text-center">
+          <div class="w-16 h-16 mx-auto bg-cyan-100 rounded-2xl flex items-center justify-center mb-4 text-4xl">🌿</div>
+          <h4 class="font-semibold mb-1">Peppermint</h4>
+          <p class="text-sm text-gray-600">Refreshes & supports respiratory health. Clears the mind.</p>
+        </div>
+      </div>
+     
+      <div class="text-center mt-12">
+        <a href="https://www.doterra.com/US/en/p/aromatouch-technique-kit" target="_blank"
+           class="text-amber-700 hover:text-amber-600 font-medium flex items-center justify-center gap-2 mx-auto">
+          Learn more about these oils on doTERRA.com <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL OFFER -->
+  <section id="offer" class="py-20 bg-gradient-to-br from-amber-50 to-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-2 bg-white shadow rounded-full px-6 py-2 mb-8">
+        <span class="text-red-500">🔥</span>
+        <span class="font-medium uppercase tracking-widest text-sm">Limited-Time Offer</span>
+      </div>
+      <h2 class="heading-font text-5xl mb-6">Your First AromaTouch Session<br>is Only <span class="gold">$80</span></h2>
+      <p class="text-xl text-gray-600 mb-10">Perfect way to experience the gentle power of doTERRA AromaTouch in the comfort of your home.</p>
+     
+      <div class="bg-white rounded-3xl p-10 shadow">
+        <div class="grid grid-cols-2 gap-8 text-left max-w-md mx-auto">
+          <div>
+            <div class="text-sm text-gray-500">Regular Price</div>
+            <div class="text-4xl font-semibold">$80</div>
+            <div class="text-sm text-gray-500">60-minute session</div>
+          </div>
+          <div class="border-l pl-8">
+            <div class="text-sm text-emerald-600 font-medium">FIRST SESSION</div>
+            <div class="text-5xl font-bold gold">$80</div>
+            <div class="text-xs text-emerald-600">Mobile service • Book today</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOBILE LOCATION INFO -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="heading-font text-4xl mb-8 text-center">Premium Mobile Service Across Greater Los Angeles</h2>
+      <div class="bg-[#f9f7f4] p-10 rounded-3xl max-w-2xl mx-auto">
+        <ul class="space-y-6 text-gray-600">
+          <li class="flex gap-4">
+            <span class="text-2xl">🚗</span>
+            <span>We come to your home or office in West LA and surrounding areas</span>
+          </li>
+          <li class="flex gap-4">
+            <span class="text-2xl">🌿</span>
+            <span>Only pure doTERRA CPTG oils – never synthetic fragrances</span>
+          </li>
+          <li class="flex gap-4">
+            <span class="text-2xl">🕊️</span>
+            <span>Professional setup with portable table and fresh linens</span>
+          </li>
+          <li class="flex gap-4">
+            <span class="text-2xl">👥</span>
+            <span>Personalized care in the convenience of your space</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="book" class="py-24 bg-[#111827] text-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="heading-font text-5xl mb-4">Ready for profound calm?</h2>
+      <p class="text-xl text-gray-400 mb-12">Secure your first session today – only $80</p>
+     
+      <a href="tel:3235953611"
+         class="block w-full max-w-md mx-auto bg-[#d4af37] hover:bg-amber-500 transition text-black font-semibold text-xl py-6 rounded-2xl mb-12 shadow-2xl">
+        📞 CALL / TEXT 323-595-3611<br>
+        <span class="text-lg font-normal">(calls & texts accepted anytime)</span>
+      </a>
+     
+      <p class="text-lg mb-8">or fill out the form below</p>
+     
+      <form action="https://formspree.io/f/mkovdoog" method="POST" class="max-w-md mx-auto space-y-6">
+        <div class="grid grid-cols-2 gap-4">
+          <input type="text" name="first_name" placeholder="First Name" required class="bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-400 text-white">
+          <input type="text" name="last_name" placeholder="Last Name" required class="bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-400 text-white">
+        </div>
+        <input type="email" name="email" placeholder="Email Address" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-400 text-white">
+        <input type="tel" name="phone" placeholder="Phone Number" required class="w-full bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-400 text-white">
+       
+        <div class="grid grid-cols-2 gap-4">
+          <input type="text" name="preferred_date" placeholder="Preferred Date (MM/DD)" class="bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-400 text-white">
+          <select name="time" class="bg-white/10 border border-white/20 rounded-2xl px-6 py-4 focus:outline-none focus:border-amber-400 text-white">
+            <option value="">Preferred Time</option>
+            <option>Afternoon (1-5 PM)</option>
+            <option>Evening (5-9 PM)</option>
+          </select>
+        </div>
+       
+        <textarea name="message" rows="3" placeholder="Any notes or questions?" class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-4 focus:outline-none focus:border-amber-400 text-white"></textarea>
+       
+        <button type="submit" class="w-full bg-white text-gray-900 font-semibold py-5 rounded-2xl hover:bg-gray-100 transition">
+          SEND BOOKING REQUEST
+        </button>
+      </form>
+     
+      <div class="mt-12 text-sm text-gray-500">
+        Questions? Call or text 323-595-3611<br>
+        We typically respond within 1 business day.
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="flex justify-center items-center gap-3 mb-6">
+        <div class="w-8 h-8 bg-[#d4af37] rounded-full flex items-center justify-center text-white text-xl">B</div>
+        <span class="heading-font text-2xl gold">Blessed Essentials</span>
+      </div>
+      <p class="mb-4">Mobile AromaTouch Service • Greater Los Angeles • West LA & Surrounding Areas</p>
+      <p class="text-lg mb-4">
+        Call / Text: <a href="tel:3235953611" class="text-gold hover:underline">323-595-3611</a><br>
+        <span class="text-sm">(accepted anytime)</span>
+      </p>
+      <p class="text-sm">© 2026 Blessed Essentials. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
