@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#f3eee4">
-  <meta name="description" content="PRICELESS — the online ecotopia. Vetted organic, natural, and regenerative goods. Catalog and inquire only.">
-  <title>PRICELESS · The online ecotopia</title>
+  <meta name="description" content="PRICELESS — organic fashion from all brands all over the world. The online ecotopia. Catalog and inquire only.">
+  <title>PRICELESS · Organic fashion worldwide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -171,7 +171,7 @@
       margin-top: 16px;
       color: var(--muted);
       font-size: 1.08rem;
-      max-width: 36ch;
+      max-width: 46ch;
     }
 
     .promises {
@@ -459,18 +459,18 @@
       box-shadow: 0 1px 0 rgba(42, 36, 28, 0.03);
     }
 
-    .aisle-tile.grocery {
+    .aisle-tile.wear {
       background:
-        linear-gradient(160deg, #e8eadc, var(--paper));
+        linear-gradient(160deg, #e7ddd0, var(--paper));
       border-color: color-mix(in srgb, var(--olive) 40%, var(--line));
+    }
+
+    .aisle-tile.grocery {
+      background: linear-gradient(160deg, #e8eadc, var(--paper));
     }
 
     .aisle-tile.cleaning {
       background: linear-gradient(160deg, #efe4d4, var(--paper));
-    }
-
-    .aisle-tile.wear {
-      background: linear-gradient(160deg, #e7ddd0, var(--paper));
     }
 
     .aisle-tile.sleep {
@@ -591,13 +591,13 @@
 
     @media (min-width: 640px) {
       .aisle-tiles { grid-template-columns: repeat(2, 1fr); }
-      .aisle-tile.grocery { grid-column: 1 / -1; min-height: 168px; }
+      .aisle-tile.wear { grid-column: 1 / -1; min-height: 168px; }
       .cat-tiles { grid-template-columns: repeat(4, 1fr); }
     }
 
     @media (min-width: 960px) {
       .aisle-tiles { grid-template-columns: repeat(6, 1fr); }
-      .aisle-tile.grocery { grid-column: span 2; }
+      .aisle-tile.wear { grid-column: span 2; }
       .aisle-tile { min-height: 176px; }
     }
   </style>
@@ -610,26 +610,26 @@
           <strong>PRICELESS</strong>
           <span>Products</span>
         </div>
-        <p>Erewhon × Amazon — vetted organic, natural, regenerative only.</p>
+        <p>The online ecotopia — organic fashion worldwide. Catalog + inquire.</p>
       </div>
       <a class="inquire-cta" href="mailto:powerplantog@gmail.com">Inquire</a>
     </header>
 
     <section class="hero">
-      <p class="kicker">Online ecotopia marketplace</p>
-      <h1>The online ecotopia.</h1>
-      <p class="lede">Curated like Erewhon, convenient like Amazon. Online only. Ingredient audits. No greenwashing, no hidden swaps, no buyouts.</p>
+      <p class="kicker">The online ecotopia</p>
+      <h1>Organic fashion from all brands all over the world.</h1>
+      <p class="lede">Wholesale clothing catalogs first. Catalog + inquire — no checkout, no prices. Grocery is one door. Cleaning stays on the aisle.</p>
       <div class="promises">
-        <span>100% vetted organic, natural, regenerative</span>
-        <span>Transparency + ingredient audits</span>
+        <span>Italy · Canada · Nepal · Santa Cruz</span>
+        <span>Accepted wholesale catalogs only</span>
         <span>Catalog + inquire — no checkout</span>
       </div>
     </section>
 
     <nav class="cats" aria-label="Shop categories">
+      <a href="#wear">Wear</a>
       <a href="/priceless/grocery/">Grocery</a>
       <a href="#cleaning">Cleaning</a>
-      <a href="#wear">Wear</a>
       <a href="#sleep">Sleep</a>
       <a href="#home">Home</a>
     </nav>
@@ -637,6 +637,10 @@
     <section class="shop-by" id="aisles">
       <h2>Shop by aisle</h2>
       <div class="aisle-tiles">
+        <a class="aisle-tile wear" href="#wear">
+          <strong>Wear</strong>
+          <span>Organic fashion from all brands all over the world — Italy, Canada, Nepal, Santa Cruz.</span>
+        </a>
         <a class="aisle-tile grocery" href="/priceless/grocery/">
           <strong>Grocery</strong>
           <span>The full pantry, produce, dairy, and frozen catalog — one door, not a wall of SKUs.</span>
@@ -644,10 +648,6 @@
         <a class="aisle-tile cleaning" href="#cleaning">
           <strong>Cleaning</strong>
           <span>Plant-based cleaners and tree-free paper, named on the bottle.</span>
-        </a>
-        <a class="aisle-tile wear" href="#wear">
-          <strong>Wear</strong>
-          <span>Wholesale clothing catalogs with pictures — accepted retailers only.</span>
         </a>
         <a class="aisle-tile sleep" href="#sleep">
           <strong>Sleep</strong>
@@ -660,188 +660,13 @@
       </div>
     </section>
 
-    <section class="aisle" id="cleaning">
-      <div class="aisle-head">
-        <h2>Cleaning</h2>
-        <p>Plant-based cleaners and tree-free paper. Named ingredients. Catalog + inquire — no checkout, no prices.</p>
-      </div>
-      <div class="cat-tiles" aria-label="Cleaning categories">
-        <a class="cat-tile" href="#clean-surface"><strong>Surface</strong><span>Plant-based concentrates</span></a>
-        <a class="cat-tile" href="#clean-laundry"><strong>Laundry</strong><span>Detergent and pods</span></a>
-        <a class="cat-tile" href="#clean-hands"><strong>Hands</strong><span>Wash, gel, mist, lotion</span></a>
-        <a class="cat-tile" href="#clean-paper"><strong>Paper</strong><span>Tree-free bamboo bath tissue</span></a>
-      </div>
-
-      <div class="brand-line subhead" id="clean-surface">
-        <h3>doTERRA</h3>
-        <p>Cleaning and household only. Priceless Investments account #1259494 — On Guard cleaning already ordered. On Guard Protective Blend: Wild Orange, Clove, Cinnamon Bark, Eucalyptus, Rosemary. abode Refreshing Blend plus named citrus oils. No oils-as-product, toothpaste, sunscreen, beadlets, or throat drops on this aisle.</p>
-      </div>
-      <div class="grid" id="clean-hands">
-        <article class="card">
-          <div class="photo">
-            <img src="img/cleaning/onguard-cleaner-concentrate.jpg" alt="On Guard Cleaner Concentrate" width="600" height="800" loading="lazy">
-          </div>
-          <h3>On Guard Cleaner Concentrate</h3>
-          <p class="what">doTERRA — plant-based multi-purpose concentrate with Wild Orange, Clove, Cinnamon Bark, Eucalyptus, and Rosemary.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20On%20Guard%20Cleaner%20Concentrate">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/cleaning/onguard-laundry-detergent.jpg" alt="On Guard Laundry Detergent" width="600" height="800" loading="lazy">
-          </div>
-          <h3>On Guard Laundry Detergent</h3>
-          <p class="what">doTERRA — ultraconcentrated detergent with On Guard Protective Blend and bio-originated enzymes. No synthetic fragrance or dye.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20On%20Guard%20Laundry%20Detergent">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/cleaning/onguard-foaming-hand-wash.jpg" alt="On Guard Foaming Hand Wash" width="600" height="800" loading="lazy">
-          </div>
-          <h3>On Guard Foaming Hand Wash</h3>
-          <p class="what">doTERRA — pH-balanced foaming wash with On Guard Protective Blend. Cleans without harsh soap.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20On%20Guard%20Foaming%20Hand%20Wash">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/cleaning/onguard-hand-sanitizing-gel.jpg" alt="On Guard Hand Sanitizing Gel" width="600" height="800" loading="lazy">
-          </div>
-          <h3>On Guard Hand Sanitizing Gel</h3>
-          <p class="what">doTERRA — 70% plant-derived ethyl alcohol gel with apple extract, glycerin, and On Guard Protective Blend.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20On%20Guard%20Hand%20Sanitizing%20Gel">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/cleaning/onguard-hand-sanitizing-mist.jpg" alt="On Guard Hand Sanitizing Mist" width="600" height="800" loading="lazy">
-          </div>
-          <h3>On Guard Hand Sanitizing Mist</h3>
-          <p class="what">doTERRA — quick-drying mist with plant-derived ethyl alcohol, apple extract, and On Guard oils.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20On%20Guard%20Hand%20Sanitizing%20Mist">Inquire</a>
-          </div>
-        </article>
-      </div>
-      <div class="brand-line subhead" id="clean-laundry">
-        <h3>abode</h3>
-        <p>doTERRA household line — surface, dish, laundry, and the Citrus Bloom hand-care duet. Formulated without parabens, dyes, synthetic fragrance, or phthalates.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="photo">
-            <img src="img/cleaning/abode-surface-cleaner.jpg" alt="abode Multi-Purpose Surface Cleaner Concentrate" width="600" height="800" loading="lazy">
-          </div>
-          <h3>abode Multi-Purpose Surface Cleaner Concentrate</h3>
-          <p class="what">doTERRA abode — Lime, Litsea, Cassia, Lemon Eucalyptus, Tea Tree, Arborvitae, Kochii Eucalyptus, Cilantro, Lavandin, Lemon Myrtle, plus thymol. Dilute in the glass spray.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Multi-Purpose%20Surface%20Cleaner%20Concentrate">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/cleaning/abode-liquid-dish-soap.jpg" alt="abode Liquid Dish Soap" width="600" height="800" loading="lazy">
-          </div>
-          <h3>abode Liquid Dish Soap</h3>
-          <p class="what">doTERRA abode — plant-based dish soap with the abode blend and Grapefruit essential oil. Aluminum refill bottle.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Liquid%20Dish%20Soap">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/cleaning/abode-dishwasher-pods.jpg" alt="abode Dishwasher Pods" width="600" height="800" loading="lazy">
-          </div>
-          <h3>abode Dishwasher Pods</h3>
-          <p class="what">doTERRA abode — dishwasher pods with the abode essential-oil blend. One pod per load.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Dishwasher%20Pods">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/cleaning/abode-laundry-pods.jpg" alt="abode Laundry Pods" width="600" height="800" loading="lazy">
-          </div>
-          <h3>abode Laundry Pods</h3>
-          <p class="what">doTERRA abode — laundry pods with the abode blend. Toss in the drum; no mystery scent pack.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Laundry%20Pods">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/cleaning/abode-foaming-hand-wash.jpg" alt="abode Foaming Hand Wash" width="600" height="800" loading="lazy">
-          </div>
-          <h3>abode Foaming Hand Wash</h3>
-          <p class="what">doTERRA abode — concentrate infused with Citrus Bloom. Natural surfactants and banana fruit extract. Hand-care duet.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Foaming%20Hand%20Wash">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/cleaning/abode-hand-lotion.jpg" alt="abode Lotion" width="600" height="800" loading="lazy">
-          </div>
-          <h3>abode Lotion</h3>
-          <p class="what">doTERRA abode — hand lotion infused with Citrus Bloom. Plant-based moisturizer; the other half of the hand-care duet.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Lotion">Inquire</a>
-          </div>
-        </article>
-      </div>
-      <div class="brand-line subhead" id="clean-paper">
-        <h3>Gaia&#x27;s bamboo paper</h3>
-        <p>The bamboo toilet paper Victoria uses. Tree-free, 3-ply, plastic-free packaging. Official product photos from gaias2050.com.</p>
-      </div>
-      <div class="grid" id="clean-paper">
-        <article class="card featured">
-          <div class="photo">
-            <img src="img/paper/gaias-premium-fruitp.jpg" alt="Gaia&#x27;s Premium Bamboo FruiTP Toilet Paper" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Gaia&#x27;s Premium Bamboo FruiTP Toilet Paper</h3>
-          <p class="what">Gaia&#x27;s — 100% bamboo, 3-ply, individually wrapped, plastic-free pack. Tree-free bath tissue Victoria uses.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Gaia%27s%20Premium%20Bamboo%20FruiTP%20Toilet%20Paper">Inquire</a>
-          </div>
-        </article>
-        <article class="card featured">
-          <div class="photo">
-            <img src="img/paper/gaias-premium-toilet-paper.jpg" alt="Gaia&#x27;s Premium Bamboo Toilet Paper" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Gaia&#x27;s Premium Bamboo Toilet Paper</h3>
-          <p class="what">Gaia&#x27;s — premium bamboo pulp and fiber, 3-ply, chlorine-free, no glue, plastic-free packaging.</p>
-          <div class="row">
-            <span class="chip">named</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Gaia%27s%20Premium%20Bamboo%20Toilet%20Paper">Inquire</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
     <section class="aisle" id="wear">
       <div class="aisle-head">
         <h2>Wear</h2>
-        <p>Wholesale catalogs with pictures. Accepted retailers only. Catalog + inquire — no checkout, no prices.</p>
+        <p>Organic fashion from all brands all over the world. Accepted wholesale catalogs with pictures — Italy, Canada, Nepal, Santa Cruz. Catalog + inquire — no checkout, no prices.</p>
       </div>
       <div class="brand-line">
-        <h3>CASAGiN</h3>
+        <h3>CASAGiN (Italy)</h3>
         <p>Italian sustainable underwear and loungewear in TENCEL Modal. Wholesale catalog — accepted retailer. Retailer account created by Alberto for powerplantog@gmail.com.</p>
       </div>
       <div class="grid">
@@ -1023,173 +848,7 @@
         </article>
       </div>
       <div class="brand-line">
-        <h3>Royal Hemp</h3>
-        <p>Wholesale catalog — Royal Hemp Enterprises (Kiran Thapa, royalhempnepal.com). Textile, knit, and footwear only. Socks first. No CBD, no hemp seed oil, no 420-branded shoes, no Health / Wellness.</p>
-      </div>
-      <div class="grid">
-        <article class="card featured">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/hemp-ankle-socks.jpg" alt="Hemp Ankle Socks" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Hemp Ankle Socks</h3>
-          <p class="what">Royal Hemp Enterprises — hemp ankle socks. Textile / footwear wholesale. Kiran Thapa, royalhempnepal.com.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Ankle%20Socks">Inquire</a>
-          </div>
-        </article>
-        <article class="card featured">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/hemp-full-socks.jpg" alt="Hemp Full Socks" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Hemp Full Socks</h3>
-          <p class="what">Royal Hemp Enterprises — hemp full-length socks. Textile only.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Full%20Socks">Inquire</a>
-          </div>
-        </article>
-        <article class="card featured">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/hemp-baby-socks.jpg" alt="Hemp Baby Socks" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Hemp Baby Socks</h3>
-          <p class="what">Royal Hemp Enterprises — hemp baby socks. Textile only.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Baby%20Socks">Inquire</a>
-          </div>
-        </article>
-      </div>
-      <div class="brand-line">
-        <h3>Royal Hemp knit, textile, footwear</h3>
-        <p>The rest of the official fashion catalog that exists on royalhempnepal.com.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/half-sleeve-tshirt.jpg" alt="Half Sleeve Hemp Knitted Tshirt" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Half Sleeve Hemp Knitted Tshirt</h3>
-          <p class="what">Royal Hemp Enterprises — hemp knit half-sleeve tee. Nepal textile catalog.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Half%20Sleeve%20Hemp%20Knitted%20Tshirt">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/round-neck-tshirt.jpg" alt="Hemp Knitted round Neck T-Shirt" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Hemp Knitted round Neck T-Shirt</h3>
-          <p class="what">Royal Hemp Enterprises — hemp knit round-neck tee.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Knitted%20round%20Neck%20T-Shirt">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/polo-tshirt.jpg" alt="Hemp Polo Neck Knitted T-Shirt" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Hemp Polo Neck Knitted T-Shirt</h3>
-          <p class="what">Royal Hemp Enterprises — hemp knit polo.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Polo%20Neck%20Knitted%20T-Shirt">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/mens-knitted-shirt.jpg" alt="Men&#x27;s Hemp Knitted Shirt" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Men&#x27;s Hemp Knitted Shirt</h3>
-          <p class="what">Royal Hemp Enterprises — men&#x27;s hemp knitted shirt.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Men%27s%20Hemp%20Knitted%20Shirt">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/mens-knitted-shorts.jpg" alt="Men&#x27;s Knitted Hemp Shorts" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Men&#x27;s Knitted Hemp Shorts</h3>
-          <p class="what">Royal Hemp Enterprises — men&#x27;s hemp knit shorts.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Men%27s%20Knitted%20Hemp%20Shorts">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/sleeveless-top.jpg" alt="Hemp Knitted Sleveless Top" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Hemp Knitted Sleveless Top</h3>
-          <p class="what">Royal Hemp Enterprises — hemp knit sleeveless top.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Knitted%20Sleveless%20Top">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/halter-top.jpg" alt="Knitted Halter Top" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Knitted Halter Top</h3>
-          <p class="what">Royal Hemp Enterprises — hemp knit halter top.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Knitted%20Halter%20Top">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/hemp-boxer.jpg" alt="Hemp Boxer" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Hemp Boxer</h3>
-          <p class="what">Royal Hemp Enterprises — hemp boxer. Textile only.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Boxer">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/natural-hemp-fabric.jpg" alt="Natural Hemp Fabric" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Natural Hemp Fabric</h3>
-          <p class="what">Royal Hemp Enterprises — natural hemp fabric by the cut. Textile catalog.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Natural%20Hemp%20Fabric">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/casual-hemp-sneakers.jpg" alt="Casual Hemp Sneakers" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Casual Hemp Sneakers</h3>
-          <p class="what">Royal Hemp Enterprises — casual hemp sneakers. Footwear, not 420-branded.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Casual%20Hemp%20Sneakers">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="photo">
-            <img src="img/wear/royal-hemp/sadaya-hemp-slip-on.jpg" alt="Sadaya Hemp Slip On" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Sadaya Hemp Slip On</h3>
-          <p class="what">Royal Hemp Enterprises — Sadaya hemp slip-on shoes. Footwear only.</p>
-          <div class="row">
-            <span class="chip live">wholesale</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Sadaya%20Hemp%20Slip%20On">Inquire</a>
-          </div>
-        </article>
-      </div>
-      <div class="brand-line">
-        <h3>Nomads Hemp Wear</h3>
+        <h3>Nomads Hemp Wear (Canada)</h3>
         <p>Wholesale catalog — SS24 lookbook on file. 6998 Fern Rd, Winlaw BC · info@nomadshempwear.com. Official photos from nomadshempwear.com.</p>
       </div>
       <div class="grid">
@@ -1377,7 +1036,173 @@
         </article>
       </div>
       <div class="brand-line">
-        <h3>Dash Hemp Clothing</h3>
+        <h3>Royal Hemp (Nepal)</h3>
+        <p>Wholesale catalog — Royal Hemp Enterprises (Kiran Thapa, royalhempnepal.com). Textile, knit, and footwear only. Socks first. No CBD, no hemp seed oil, no 420-branded shoes, no Health / Wellness.</p>
+      </div>
+      <div class="grid">
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/hemp-ankle-socks.jpg" alt="Hemp Ankle Socks" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Hemp Ankle Socks</h3>
+          <p class="what">Royal Hemp Enterprises — hemp ankle socks. Textile / footwear wholesale. Kiran Thapa, royalhempnepal.com.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Ankle%20Socks">Inquire</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/hemp-full-socks.jpg" alt="Hemp Full Socks" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Hemp Full Socks</h3>
+          <p class="what">Royal Hemp Enterprises — hemp full-length socks. Textile only.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Full%20Socks">Inquire</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/hemp-baby-socks.jpg" alt="Hemp Baby Socks" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Hemp Baby Socks</h3>
+          <p class="what">Royal Hemp Enterprises — hemp baby socks. Textile only.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Baby%20Socks">Inquire</a>
+          </div>
+        </article>
+      </div>
+      <div class="brand-line">
+        <h3>Royal Hemp knit, textile, footwear</h3>
+        <p>The rest of the official fashion catalog that exists on royalhempnepal.com.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/half-sleeve-tshirt.jpg" alt="Half Sleeve Hemp Knitted Tshirt" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Half Sleeve Hemp Knitted Tshirt</h3>
+          <p class="what">Royal Hemp Enterprises — hemp knit half-sleeve tee. Nepal textile catalog.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Half%20Sleeve%20Hemp%20Knitted%20Tshirt">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/round-neck-tshirt.jpg" alt="Hemp Knitted round Neck T-Shirt" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Hemp Knitted round Neck T-Shirt</h3>
+          <p class="what">Royal Hemp Enterprises — hemp knit round-neck tee.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Knitted%20round%20Neck%20T-Shirt">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/polo-tshirt.jpg" alt="Hemp Polo Neck Knitted T-Shirt" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Hemp Polo Neck Knitted T-Shirt</h3>
+          <p class="what">Royal Hemp Enterprises — hemp knit polo.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Polo%20Neck%20Knitted%20T-Shirt">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/mens-knitted-shirt.jpg" alt="Men&#x27;s Hemp Knitted Shirt" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Men&#x27;s Hemp Knitted Shirt</h3>
+          <p class="what">Royal Hemp Enterprises — men&#x27;s hemp knitted shirt.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Men%27s%20Hemp%20Knitted%20Shirt">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/mens-knitted-shorts.jpg" alt="Men&#x27;s Knitted Hemp Shorts" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Men&#x27;s Knitted Hemp Shorts</h3>
+          <p class="what">Royal Hemp Enterprises — men&#x27;s hemp knit shorts.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Men%27s%20Knitted%20Hemp%20Shorts">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/sleeveless-top.jpg" alt="Hemp Knitted Sleveless Top" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Hemp Knitted Sleveless Top</h3>
+          <p class="what">Royal Hemp Enterprises — hemp knit sleeveless top.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Knitted%20Sleveless%20Top">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/halter-top.jpg" alt="Knitted Halter Top" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Knitted Halter Top</h3>
+          <p class="what">Royal Hemp Enterprises — hemp knit halter top.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Knitted%20Halter%20Top">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/hemp-boxer.jpg" alt="Hemp Boxer" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Hemp Boxer</h3>
+          <p class="what">Royal Hemp Enterprises — hemp boxer. Textile only.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Boxer">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/natural-hemp-fabric.jpg" alt="Natural Hemp Fabric" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Natural Hemp Fabric</h3>
+          <p class="what">Royal Hemp Enterprises — natural hemp fabric by the cut. Textile catalog.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Natural%20Hemp%20Fabric">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/casual-hemp-sneakers.jpg" alt="Casual Hemp Sneakers" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Casual Hemp Sneakers</h3>
+          <p class="what">Royal Hemp Enterprises — casual hemp sneakers. Footwear, not 420-branded.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Casual%20Hemp%20Sneakers">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/sadaya-hemp-slip-on.jpg" alt="Sadaya Hemp Slip On" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Sadaya Hemp Slip On</h3>
+          <p class="what">Royal Hemp Enterprises — Sadaya hemp slip-on shoes. Footwear only.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Sadaya%20Hemp%20Slip%20On">Inquire</a>
+          </div>
+        </article>
+      </div>
+      <div class="brand-line">
+        <h3>Dash Hemp Clothing (Santa Cruz / USA)</h3>
         <p>Wholesale catalog — line sheets received May 2026. Dash Hemp Santa Cruz, 303 Potrero St. Named hemp clothing only. Official photos from dashhemp.com.</p>
       </div>
       <div class="grid">
@@ -1493,6 +1318,181 @@
         </article>
       </div>
       <p class="aisle-note">More wholesale clothing catalogs posting as acceptances land.</p>
+    </section>
+
+    <section class="aisle" id="cleaning">
+      <div class="aisle-head">
+        <h2>Cleaning</h2>
+        <p>Plant-based cleaners and tree-free paper. Named ingredients. Catalog + inquire — no checkout, no prices.</p>
+      </div>
+      <div class="cat-tiles" aria-label="Cleaning categories">
+        <a class="cat-tile" href="#clean-surface"><strong>Surface</strong><span>Plant-based concentrates</span></a>
+        <a class="cat-tile" href="#clean-laundry"><strong>Laundry</strong><span>Detergent and pods</span></a>
+        <a class="cat-tile" href="#clean-hands"><strong>Hands</strong><span>Wash, gel, mist, lotion</span></a>
+        <a class="cat-tile" href="#clean-paper"><strong>Paper</strong><span>Tree-free bamboo bath tissue</span></a>
+      </div>
+
+      <div class="brand-line subhead" id="clean-surface">
+        <h3>doTERRA</h3>
+        <p>Cleaning and household only. Priceless Investments account #1259494 — On Guard cleaning already ordered. On Guard Protective Blend: Wild Orange, Clove, Cinnamon Bark, Eucalyptus, Rosemary. abode Refreshing Blend plus named citrus oils. No oils-as-product, toothpaste, sunscreen, beadlets, or throat drops on this aisle.</p>
+      </div>
+      <div class="grid" id="clean-hands">
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/onguard-cleaner-concentrate.jpg" alt="On Guard Cleaner Concentrate" width="600" height="800" loading="lazy">
+          </div>
+          <h3>On Guard Cleaner Concentrate</h3>
+          <p class="what">doTERRA — plant-based multi-purpose concentrate with Wild Orange, Clove, Cinnamon Bark, Eucalyptus, and Rosemary.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20On%20Guard%20Cleaner%20Concentrate">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/onguard-laundry-detergent.jpg" alt="On Guard Laundry Detergent" width="600" height="800" loading="lazy">
+          </div>
+          <h3>On Guard Laundry Detergent</h3>
+          <p class="what">doTERRA — ultraconcentrated detergent with On Guard Protective Blend and bio-originated enzymes. No synthetic fragrance or dye.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20On%20Guard%20Laundry%20Detergent">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/onguard-foaming-hand-wash.jpg" alt="On Guard Foaming Hand Wash" width="600" height="800" loading="lazy">
+          </div>
+          <h3>On Guard Foaming Hand Wash</h3>
+          <p class="what">doTERRA — pH-balanced foaming wash with On Guard Protective Blend. Cleans without harsh soap.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20On%20Guard%20Foaming%20Hand%20Wash">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/onguard-hand-sanitizing-gel.jpg" alt="On Guard Hand Sanitizing Gel" width="600" height="800" loading="lazy">
+          </div>
+          <h3>On Guard Hand Sanitizing Gel</h3>
+          <p class="what">doTERRA — 70% plant-derived ethyl alcohol gel with apple extract, glycerin, and On Guard Protective Blend.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20On%20Guard%20Hand%20Sanitizing%20Gel">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/onguard-hand-sanitizing-mist.jpg" alt="On Guard Hand Sanitizing Mist" width="600" height="800" loading="lazy">
+          </div>
+          <h3>On Guard Hand Sanitizing Mist</h3>
+          <p class="what">doTERRA — quick-drying mist with plant-derived ethyl alcohol, apple extract, and On Guard oils.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20On%20Guard%20Hand%20Sanitizing%20Mist">Inquire</a>
+          </div>
+        </article>
+      </div>
+      <div class="brand-line subhead" id="clean-laundry">
+        <h3>abode</h3>
+        <p>doTERRA household line — surface, dish, laundry, and the Citrus Bloom hand-care duet. Formulated without parabens, dyes, synthetic fragrance, or phthalates.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/abode-surface-cleaner.jpg" alt="abode Multi-Purpose Surface Cleaner Concentrate" width="600" height="800" loading="lazy">
+          </div>
+          <h3>abode Multi-Purpose Surface Cleaner Concentrate</h3>
+          <p class="what">doTERRA abode — Lime, Litsea, Cassia, Lemon Eucalyptus, Tea Tree, Arborvitae, Kochii Eucalyptus, Cilantro, Lavandin, Lemon Myrtle, plus thymol. Dilute in the glass spray.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Multi-Purpose%20Surface%20Cleaner%20Concentrate">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/abode-liquid-dish-soap.jpg" alt="abode Liquid Dish Soap" width="600" height="800" loading="lazy">
+          </div>
+          <h3>abode Liquid Dish Soap</h3>
+          <p class="what">doTERRA abode — plant-based dish soap with the abode blend and Grapefruit essential oil. Aluminum refill bottle.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Liquid%20Dish%20Soap">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/abode-dishwasher-pods.jpg" alt="abode Dishwasher Pods" width="600" height="800" loading="lazy">
+          </div>
+          <h3>abode Dishwasher Pods</h3>
+          <p class="what">doTERRA abode — dishwasher pods with the abode essential-oil blend. One pod per load.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Dishwasher%20Pods">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/abode-laundry-pods.jpg" alt="abode Laundry Pods" width="600" height="800" loading="lazy">
+          </div>
+          <h3>abode Laundry Pods</h3>
+          <p class="what">doTERRA abode — laundry pods with the abode blend. Toss in the drum; no mystery scent pack.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Laundry%20Pods">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/abode-foaming-hand-wash.jpg" alt="abode Foaming Hand Wash" width="600" height="800" loading="lazy">
+          </div>
+          <h3>abode Foaming Hand Wash</h3>
+          <p class="what">doTERRA abode — concentrate infused with Citrus Bloom. Natural surfactants and banana fruit extract. Hand-care duet.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Foaming%20Hand%20Wash">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/abode-hand-lotion.jpg" alt="abode Lotion" width="600" height="800" loading="lazy">
+          </div>
+          <h3>abode Lotion</h3>
+          <p class="what">doTERRA abode — hand lotion infused with Citrus Bloom. Plant-based moisturizer; the other half of the hand-care duet.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20abode%20Lotion">Inquire</a>
+          </div>
+        </article>
+      </div>
+      <div class="brand-line subhead" id="clean-paper">
+        <h3>Gaia&#x27;s bamboo paper</h3>
+        <p>The bamboo toilet paper Victoria uses. Tree-free, 3-ply, plastic-free packaging. Official product photos from gaias2050.com.</p>
+      </div>
+      <div class="grid" id="clean-paper">
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/paper/gaias-premium-fruitp.jpg" alt="Gaia&#x27;s Premium Bamboo FruiTP Toilet Paper" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Gaia&#x27;s Premium Bamboo FruiTP Toilet Paper</h3>
+          <p class="what">Gaia&#x27;s — 100% bamboo, 3-ply, individually wrapped, plastic-free pack. Tree-free bath tissue Victoria uses.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Gaia%27s%20Premium%20Bamboo%20FruiTP%20Toilet%20Paper">Inquire</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/paper/gaias-premium-toilet-paper.jpg" alt="Gaia&#x27;s Premium Bamboo Toilet Paper" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Gaia&#x27;s Premium Bamboo Toilet Paper</h3>
+          <p class="what">Gaia&#x27;s — premium bamboo pulp and fiber, 3-ply, chlorine-free, no glue, plastic-free packaging.</p>
+          <div class="row">
+            <span class="chip">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Gaia%27s%20Premium%20Bamboo%20Toilet%20Paper">Inquire</a>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="aisle" id="sleep">
