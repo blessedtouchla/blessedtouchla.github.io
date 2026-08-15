@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0a08">
+  <meta name="description" content="Victoria Imtanes — @mamamastermind. Music, podcast, comedy, Tesla rentals, hemp, and healing.">
+  <title>Victoria Imtanes · @mamamastermind</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0b0a08;
+      --ink-2: #14120f;
+      --gold: #c9a24d;
+      --gold-soft: #e4c98a;
+      --gold-dim: rgba(201, 162, 77, 0.22);
+      --line: rgba(201, 162, 77, 0.28);
+      --text: #f3ead6;
+      --muted: #9a907c;
+      --soon: #6f6858;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      min-height: 100%;
+      background: radial-gradient(1200px 700px at 50% -10%, #1c1812 0%, var(--ink) 55%);
+      color: var(--text);
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 36px 16px 56px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 430px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .mono {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 0 6px var(--gold-dim);
+      display: grid;
+      place-items: center;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--gold-soft);
+      background: linear-gradient(180deg, #1a1712, #0e0d0b);
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+    }
+
+    .handle {
+      margin-top: 8px;
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: lowercase;
+    }
+
+    .bio {
+      margin: 14px auto 0;
+      max-width: 34ch;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    section + section { margin-top: 22px; }
+
+    .label {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+    }
+
+    .stack { display: grid; gap: 10px; }
+
+    a.btn, button.btn {
+      min-height: 56px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #17150f, var(--ink-2));
+      color: var(--text);
+      text-decoration: none;
+      text-align: left;
+      cursor: pointer;
+      font: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+    }
+
+    a.btn:hover, a.btn:focus-visible {
+      border-color: var(--gold);
+      transform: translateY(-1px);
+    }
+
+    .btn strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .btn em, .meta {
+      font-style: normal;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      color: var(--gold-soft);
+      border-radius: 999px;
+      padding: 3px 8px;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .btn.soon {
+      color: var(--soon);
+      background: #100f0c;
+      cursor: default;
+    }
+
+    .btn.soon strong { color: #b7ae9a; }
+    .btn.soon .meta { color: var(--soon); }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 24px;
+      transform: translateX(-50%) translateY(12px);
+      opacity: 0;
+      pointer-events: none;
+      background: #1b1812;
+      color: var(--gold-soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 20;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="mono" aria-hidden="true">VI</div>
+      <h1>Victoria Imtanes</h1>
+      <p class="handle">@mamamastermind</p>
+      <p class="bio">on a mission to heal in the funnest and most adventurous ways possible.</p>
+    </header>
+
+    <section>
+      <span class="label">LISTEN / WATCH</span>
+      <div class="stack">
+        <a class="btn" href="https://wannaplai.com" target="_blank" rel="noopener noreferrer">
+          <span><strong>PLAIGROUND</strong></span>
+          <span class="right"><span class="meta">music</span></span>
+        </a>
+        <a class="btn" href="https://www.weast.stream" target="_blank" rel="noopener noreferrer">
+          <span><strong>WEAST</strong></span>
+          <span class="right"><span class="meta">podcast</span></span>
+        </a>
+        <a class="btn" href="https://www.youtube.com/@doobielandia" target="_blank" rel="noopener noreferrer">
+          <span><strong>DoobieLandia</strong></span>
+          <span class="right"><span class="meta">YouTube</span></span>
+        </a>
+        <a class="btn" href="/grokgirl/">
+          <span><strong>Grok Girl</strong></span>
+          <span class="right"><span class="meta">comedy</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <span class="label">SHOP / RIDE</span>
+      <div class="stack">
+        <a class="btn" href="https://www.instagram.com/powerplantog/" target="_blank" rel="noopener noreferrer">
+          <span><strong>POWERPLANT</strong></span>
+          <span class="right"><span class="meta">shop</span></span>
+        </a>
+        <a class="btn" href="/teslove/">
+          <span><strong>TESLOVE</strong></span>
+          <span class="right"><span class="meta">Tesla rentals</span></span>
+        </a>
+        <button class="btn soon" type="button" data-toast="FUNKtional fitness is coming soon.">
+          <span><strong>FUNKtional fitness</strong></span>
+          <span class="right">
+            <span class="meta">organic fashion</span>
+            <span class="chip">soon</span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <span class="label">BUILD</span>
+      <div class="stack">
+        <a class="btn" href="https://advancinghemp.wordpress.com" target="_blank" rel="noopener noreferrer">
+          <span><strong>HEMPcrete</strong></span>
+          <span class="right"><span class="meta">Advancing Hemp</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <span class="label">HEAL</span>
+      <div class="stack">
+        <a class="btn" href="https://blessedtouchla.com" target="_blank" rel="noopener noreferrer">
+          <span><strong>Blessed Touch LA</strong></span>
+          <span class="right"><span class="meta">aromatherapy massage</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <span class="label">PERSONAL</span>
+      <div class="stack">
+        <a class="btn" href="https://x.com/mamamastermind" target="_blank" rel="noopener noreferrer">
+          <span><strong>X</strong></span>
+          <span class="right"><span class="meta">@mamamastermind</span></span>
+        </a>
+        <button class="btn soon" type="button" data-toast="Facebook is coming soon.">
+          <span><strong>Facebook</strong></span>
+          <span class="right">
+            <span class="meta">Victoria Imtanes</span>
+            <span class="chip">soon</span>
+          </span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const toast = document.getElementById("toast");
+    let hideTimer;
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => toast.classList.remove("show"), 2200);
+    }
+
+    document.querySelectorAll("[data-toast]").forEach((el) => {
+      el.addEventListener("click", () => showToast(el.dataset.toast));
+    });
+  </script>
+</body>
+</html>
