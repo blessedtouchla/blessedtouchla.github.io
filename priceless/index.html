@@ -723,16 +723,40 @@
       scroll-margin-top: 132px;
     }
 
+    .aisle-tile.grocery {
+      min-height: 112px;
+    }
+
+    .aisle-tile.grocery strong {
+      font-size: 1.1rem;
+    }
+
+    .chip.bestseller {
+      background: #e4ead4;
+      color: var(--live);
+    }
+
+    .feature-note {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      max-width: 62ch;
+    }
+
     @media (min-width: 640px) {
       .aisle-tiles { grid-template-columns: repeat(2, 1fr); }
-      .aisle-tile.wear { grid-column: 1 / -1; min-height: 168px; }
+      .aisle-tile.wear,
+      .aisle-tile.baby { grid-column: 1 / -1; min-height: 168px; }
+      .aisle-tile.grocery { grid-column: auto; min-height: 112px; }
       .cat-tiles { grid-template-columns: repeat(4, 1fr); }
     }
 
     @media (min-width: 960px) {
       .aisle-tiles { grid-template-columns: repeat(6, 1fr); }
-      .aisle-tile.wear { grid-column: span 2; }
+      .aisle-tile.wear,
+      .aisle-tile.baby { grid-column: span 2; min-height: 176px; }
       .aisle-tile { min-height: 176px; }
+      .aisle-tile.grocery { min-height: 132px; }
     }
   </style>
 </head>
@@ -744,7 +768,7 @@
           <strong>EKOTOPIA</strong>
           <span>Products</span>
         </div>
-        <p>Organic fashion worldwide. Catalog + inquire.</p>
+        <p>Real organic. No greenwash. Catalog + inquire.</p>
       </div>
       <div class="header-actions">
         <a class="ig-follow" href="https://www.instagram.com/ekotopia/" target="_blank" rel="noopener noreferrer">
@@ -757,11 +781,11 @@
 
     <section class="hero">
       <p class="kicker">EKOTOPIA</p>
-      <h1>Organic fashion from all brands all over the world.</h1>
-      <p class="lede">Wholesale clothing catalogs first. Catalog + inquire — no checkout, no prices. Grocery is one door. Cleaning stays on the aisle.</p>
+      <h1>Clothes and baby first. Then household.</h1>
+      <p class="lede">You do not have to check the ingredients or whether it is fairly made. We already did. Real organic. No greenwash.</p>
       <div class="promises">
-        <span>Italy · Canada · Nepal · Santa Cruz</span>
-        <span>Accepted wholesale catalogs only</span>
+        <span>Real organic</span>
+        <span>No greenwash</span>
         <span>Catalog + inquire — no checkout</span>
       </div>
     </section>
@@ -769,42 +793,162 @@
     <nav class="cats" aria-label="Shop categories">
       <a href="#wear">Wear</a>
       <a href="#baby">Baby</a>
-      <a href="/priceless/grocery/">Grocery</a>
-      <a href="#cleaning">Cleaning</a>
       <a href="#sleep">Sleep</a>
       <a href="#home">Home</a>
+      <a href="#cleaning">Cleaning</a>
+      <a href="/priceless/grocery/">Grocery</a>
     </nav>
 
     <section class="shop-by" id="aisles">
-      <h2>Shop by aisle</h2>
+      <h2>Shop by category</h2>
       <div class="aisle-tiles">
         <a class="aisle-tile wear" href="#wear">
           <strong>Wear</strong>
-          <span>Organic fashion from all brands all over the world — Italy, Canada, Nepal, Santa Cruz.</span>
+          <span>Clothes first — organic fashion from all brands all over the world.</span>
         </a>
         <a class="aisle-tile baby" href="#baby">
           <strong>Baby</strong>
-          <span>Clothes and bedding add-on — Hemp Baby Socks plus named organic brands.</span>
-        </a>
-        <a class="aisle-tile grocery" href="/priceless/grocery/">
-          <strong>Grocery</strong>
-          <span>The full pantry, produce, dairy, and frozen catalog — one door, not a wall of SKUs.</span>
-        </a>
-        <a class="aisle-tile cleaning" href="#cleaning">
-          <strong>Cleaning</strong>
-          <span>Plant-based cleaners and tree-free paper, named on the bottle.</span>
+          <span>Add-on aisle — clothes and bedding. Hemp Baby Socks plus named organic brands.</span>
         </a>
         <a class="aisle-tile sleep" href="#sleep">
           <strong>Sleep</strong>
-          <span>Boll &amp; Branch, Bearaby, organic cotton bed layers.</span>
+          <span>Sheets, pajamas, and the Cotton Napper.</span>
         </a>
         <a class="aisle-tile home" href="#home">
           <strong>Home</strong>
-          <span>Bathroom extras, kitchen tools, and home organify lanes.</span>
+          <span>Towels and household layers.</span>
+        </a>
+        <a class="aisle-tile cleaning" href="#cleaning">
+          <strong>Cleaning</strong>
+          <span>Plant-based cleaners and tree-free paper.</span>
+        </a>
+        <a class="aisle-tile grocery" href="/priceless/grocery/">
+          <strong>Grocery</strong>
+          <span>Smaller pantry door — named brands only.</span>
         </a>
       </div>
     </section>
 
+
+    <section class="aisle" id="featured">
+      <div class="aisle-head">
+        <div class="aisle-title">
+          <h2>Featured</h2>
+        </div>
+        <p>Clothes and baby first, then household. Official bestsellers only where the brand page said so.</p>
+      </div>
+      <p class="feature-note">You do not have to check the ingredients or whether it is fairly made. We already did.</p>
+      <div class="grid">
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/wear/rawganique/canaltown.jpg" alt="CANALTOWN Elastic-Free 3-Ply 100% Organic Cotton Socks" width="600" height="800" loading="lazy">
+          </div>
+          <h3>CANALTOWN Elastic-Free 3-Ply 100% Organic Cotton Socks</h3>
+          <p class="what">Rawganique — official #1 Bestseller on the brand page.</p>
+          <p class="fiber">100% organic cotton</p>
+          <div class="row">
+            <span class="chip live bestseller">bestseller</span>
+            <a class="card-link" href="#canaltown">See in aisle</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/wear/rawganique/bel-air.jpg" alt="BEL AIR 100% Organic Hemp Knit T-Shirt" width="600" height="800" loading="lazy">
+          </div>
+          <h3>BEL AIR 100% Organic Hemp Knit T-Shirt</h3>
+          <p class="what">Rawganique — official BEL AIR hemp knit tee.</p>
+          <p class="fiber">100% organic hemp</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="#bel-air">See in aisle</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/wear/rawganique/joey.jpg" alt="JOEY 100% Organic Hemp Boxer Shorts" width="600" height="800" loading="lazy">
+          </div>
+          <h3>JOEY 100% Organic Hemp Boxer Shorts</h3>
+          <p class="what">Rawganique — official JOEY hemp boxers.</p>
+          <p class="fiber">100% organic hemp</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="#joey">See in aisle</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/wear/maggies/classic-crew-tee.jpg" alt="100% Regenerative Organic Certified® Cotton - Classic Crew Neck Tee" width="600" height="800" loading="lazy">
+          </div>
+          <h3>100% Regenerative Organic Certified® Cotton - Classic Crew Neck Tee</h3>
+          <p class="what">Maggie&#x27;s Organics — official 100% ROC classic crew neck tee.</p>
+          <p class="fiber">100% ROC cotton</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="#maggies-tee">See in aisle</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/hemp-baby-socks.jpg" alt="Hemp Baby Socks" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Hemp Baby Socks</h3>
+          <p class="what">Royal Hemp Enterprises — hemp baby socks. Textile only.</p>
+          <p class="fiber">hemp textile</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="#hemp-baby-socks">See in aisle</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/baby/qforquinn-socks.jpg" alt="Natural (no dye) Kids&#x27; Socks - 98% Organic Cotton (3-pack)" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Natural (no dye) Kids&#x27; Socks - 98% Organic Cotton (3-pack)</h3>
+          <p class="what">Q for Quinn — official bestseller on the brand page.</p>
+          <p class="fiber">98% organic cotton / 2% elastane</p>
+          <div class="row">
+            <span class="chip live bestseller">bestseller</span>
+            <a class="card-link" href="#qforquinn-socks">See in aisle</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/baby/bbb-wild-floral-bodysuits.jpg" alt="Wild Floral Organic Cotton Bodysuits 2 Pack" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Wild Floral Organic Cotton Bodysuits 2 Pack</h3>
+          <p class="what">Burt&#x27;s Bees Baby — official 2-pack from the brand page.</p>
+          <p class="fiber">GOTS 100% organic cotton</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="#wild-floral">See in aisle</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/home/coyuchi-cloud-loom-towels.jpg" alt="Cloud Loom™ Organic Towels" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Cloud Loom™ Organic Towels</h3>
+          <p class="what">Coyuchi — official Best Seller on the brand page.</p>
+          <p class="fiber">GOTS 100% organic cotton</p>
+          <div class="row">
+            <span class="chip live bestseller">bestseller</span>
+            <a class="card-link" href="#cloud-loom-towels">See in aisle</a>
+          </div>
+        </article>
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/sleep/coyuchi-crinkled-percale-sheet-set.jpg" alt="Organic Crinkled Percale™ Sheet Set" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Organic Crinkled Percale™ Sheet Set</h3>
+          <p class="what">Coyuchi — official GOTS sheet set.</p>
+          <p class="fiber">GOTS 100% organic cotton</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="#coyuchi-sheets">See in aisle</a>
+          </div>
+        </article>
+      </div>
+    </section>
     <section class="aisle" id="wear">
       <div class="aisle-head">
         <div class="aisle-title">
@@ -1519,7 +1663,7 @@
         <p>Official rawganique.com product photos. 100% hemp knit and elastic-free organic cotton.</p>
       </div>
 <div class="grid">
-        <article class="card">
+        <article class="card" id="bel-air">
           <div class="photo">
             <img src="img/wear/rawganique/bel-air.jpg" alt="BEL AIR 100% Organic Hemp Knit T-Shirt" width="600" height="800" loading="lazy">
           </div>
@@ -1531,19 +1675,19 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20BEL%20AIR%20100%25%20Organic%20Hemp%20Knit%20T-Shirt">Inquire</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card featured" id="canaltown">
           <div class="photo">
             <img src="img/wear/rawganique/canaltown.jpg" alt="CANALTOWN Elastic-Free 3-Ply 100% Organic Cotton Socks" width="600" height="800" loading="lazy">
           </div>
           <h3>CANALTOWN Elastic-Free 3-Ply 100% Organic Cotton Socks</h3>
-          <p class="what">Rawganique — elastic-free organic cotton socks. Official rawganique.com PDP.</p>
+          <p class="what">Rawganique — official #1 Bestseller on the brand page.</p>
           <p class="fiber">100% organic cotton</p>
           <div class="row">
-            <span class="chip live">named</span>
+            <span class="chip live bestseller">bestseller</span>
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20CANALTOWN%20Elastic-Free%203-Ply%20100%25%20Organic%20Cotton%20Socks">Inquire</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="joey">
           <div class="photo">
             <img src="img/wear/rawganique/joey.jpg" alt="JOEY 100% Organic Hemp Boxer Shorts" width="600" height="800" loading="lazy">
           </div>
@@ -1561,7 +1705,7 @@
         <p>100% Regenerative Organic Certified cotton only. Official maggiesorganics.com photos. No stretch or spandex Maggie&#x27;s.</p>
       </div>
 <div class="grid">
-        <article class="card">
+        <article class="card" id="maggies-tee">
           <div class="photo">
             <img src="img/wear/maggies/classic-crew-tee.jpg" alt="100% Regenerative Organic Certified® Cotton - Classic Crew Neck Tee" width="600" height="800" loading="lazy">
           </div>
@@ -1696,7 +1840,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Hemp%20Baby%20Socks">Inquire</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="wild-floral">
           <div class="photo">
             <img src="img/baby/bbb-wild-floral-bodysuits.jpg" alt="Wild Floral Organic Cotton Bodysuits 2 Pack" width="600" height="800" loading="lazy">
           </div>
@@ -1804,15 +1948,15 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20JORDAN%204-Pack%20Jogger%20Baby%20%26%20Toddler%20Pants">Inquire</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card featured" id="qforquinn-socks">
           <div class="photo">
             <img src="img/baby/qforquinn-socks.jpg" alt="Natural (no dye) Kids&#x27; Socks - 98% Organic Cotton (3-pack)" width="600" height="800" loading="lazy">
           </div>
           <h3>Natural (no dye) Kids&#x27; Socks - 98% Organic Cotton (3-pack)</h3>
-          <p class="what">Q for Quinn — official 98/2 socks, posted as named.</p>
+          <p class="what">Q for Quinn — official bestseller on the brand page.</p>
           <p class="fiber">98% organic cotton / 2% elastane</p>
           <div class="row">
-            <span class="chip live">named</span>
+            <span class="chip live bestseller">bestseller</span>
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Natural%20(no%20dye)%20Kids%27%20Socks%20-%2098%25%20Organic%20Cotton%20(3-pack)">Inquire</a>
           </div>
         </article>
@@ -1892,6 +2036,245 @@
 <p class="aisle-note">More baby clothes and baby bedding post as wholesale catalogs land.</p>
     </section>
 
+    <section class="aisle" id="sleep">
+      <div class="aisle-head">
+        <h2>Sleep</h2>
+        <p>Named organic cotton first. Materials still under audit.</p>
+      </div>
+      <div class="grid">
+        <article class="card" id="coyuchi-sheets">
+          <div class="photo">
+            <img src="img/sleep/coyuchi-crinkled-percale-sheet-set.jpg" alt="Organic Crinkled Percale™ Sheet Set" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Organic Crinkled Percale™ Sheet Set</h3>
+          <p class="what">Coyuchi — official GOTS sheet set (Praline Chambray PDP).</p>
+          <p class="fiber">GOTS 100% organic cotton</p>
+          <div class="row">
+            <span class="chip live">organic</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20Crinkled%20Percale%E2%84%A2%20Sheet%20Set">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Signature Hemmed Sheet Set</h3>
+          <p class="what">Boll &amp; Branch — 100% organic cotton; confirm GOTS mark on pack</p>
+          <div class="row">
+            <span class="chip live">organic</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Signature%20Hemmed%20Sheet%20Set">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Cotton Napper (10/15/20/25 lb)</h3>
+          <p class="what">Bearaby — 100% organic cotton, GOTS + Fairtrade</p>
+          <div class="row">
+            <span class="chip live">organic</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Cotton%20Napper%20%2810/15/20/25%20lb%29">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Soft Knit Short Sleeve &amp; Pants Pajama Set</h3>
+          <p class="what">Boll &amp; Branch — 100% organic cotton; confirm GOTS mark on pack</p>
+          <div class="row">
+            <span class="chip live">organic</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Soft%20Knit%20Short%20Sleeve%20%26%20Pants%20Pajama%20Set">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Organic cotton bedding</h3>
+          <p class="what">Duvet covers and bedding layers in organic cotton.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20cotton%20bedding">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Organic cotton pillows</h3>
+          <p class="what">Sleep pillows stuffed and covered in organic cotton.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20cotton%20pillows">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Organic cotton blankets</h3>
+          <p class="what">Lightweight and layering blankets in organic cotton.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20cotton%20blankets">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Eye masks</h3>
+          <p class="what">Soft sleep masks for dark, uninterrupted nights.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Eye%20masks">Inquire</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="aisle" id="home">
+      <div class="aisle-head">
+        <h2>Home</h2>
+        <p>Bathroom extras, kitchen tools, and organify lanes. Cleaners and paper live in Cleaning.</p>
+      </div>
+      <div class="grid">
+        <article class="card featured" id="cloud-loom-towels">
+          <div class="photo">
+            <img src="img/home/coyuchi-cloud-loom-towels.jpg" alt="Cloud Loom™ Organic Towels" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Cloud Loom™ Organic Towels</h3>
+          <p class="what">Coyuchi — official Best Seller on the brand page (Undyed).</p>
+          <p class="fiber">GOTS 100% organic cotton</p>
+          <div class="row">
+            <span class="chip live bestseller">bestseller</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Cloud%20Loom%E2%84%A2%20Organic%20Towels">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Organic towels</h3>
+          <p class="what">Bath towels in certified organic cotton, pile to finish.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20towels">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Organic washcloths</h3>
+          <p class="what">Face and body cloths in organic cotton.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20washcloths">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Organic bath mats</h3>
+          <p class="what">Floor-side mats in organic fibers — no mystery blends.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20bath%20mats">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Organic cotton dish towels</h3>
+          <p class="what">Kitchen towels in organic cotton — no plastic-blend weaves.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20cotton%20dish%20towels">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Bamboo cutting boards</h3>
+          <p class="what">Kitchen boards from bamboo, not mystery composites.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Bamboo%20cutting%20boards">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Bamboo utensils</h3>
+          <p class="what">Cooking and serving tools in bamboo.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Bamboo%20utensils">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Reusable bags</h3>
+          <p class="what">Everyday carry bags meant to replace single-use plastic.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Reusable%20bags">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Reusable wraps</h3>
+          <p class="what">Food wraps that stand in for plastic film.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Reusable%20wraps">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Fair-trade</h3>
+          <p class="what">A lane for goods made under fair-trade standards.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Fair-trade">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>B-certified</h3>
+          <p class="what">A lane for B Corp and B-certified makers.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20B-certified">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
+          </div>
+          <h3>Household swaps</h3>
+          <p class="what">A lane for everyday swaps that replace conventional household goods.</p>
+          <div class="row">
+            <span class="chip">vetting</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Household%20swaps">Inquire</a>
+          </div>
+        </article>
+      </div>
+    </section>
     <section class="aisle" id="cleaning">
       <div class="aisle-head">
         <h2>Cleaning</h2>
@@ -2133,246 +2516,7 @@
 </div>
     </section>
 
-    <section class="aisle" id="sleep">
-      <div class="aisle-head">
-        <h2>Sleep</h2>
-        <p>Named organic cotton first. Materials still under audit.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="photo">
-            <img src="img/sleep/coyuchi-crinkled-percale-sheet-set.jpg" alt="Organic Crinkled Percale™ Sheet Set" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Organic Crinkled Percale™ Sheet Set</h3>
-          <p class="what">Coyuchi — official GOTS sheet set (Praline Chambray PDP).</p>
-          <p class="fiber">GOTS 100% organic cotton</p>
-          <div class="row">
-            <span class="chip live">organic</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20Crinkled%20Percale%E2%84%A2%20Sheet%20Set">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Signature Hemmed Sheet Set</h3>
-          <p class="what">Boll &amp; Branch — 100% organic cotton; confirm GOTS mark on pack</p>
-          <div class="row">
-            <span class="chip live">organic</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Signature%20Hemmed%20Sheet%20Set">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Cotton Napper (10/15/20/25 lb)</h3>
-          <p class="what">Bearaby — 100% organic cotton, GOTS + Fairtrade</p>
-          <div class="row">
-            <span class="chip live">organic</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Cotton%20Napper%20%2810/15/20/25%20lb%29">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Soft Knit Short Sleeve &amp; Pants Pajama Set</h3>
-          <p class="what">Boll &amp; Branch — 100% organic cotton; confirm GOTS mark on pack</p>
-          <div class="row">
-            <span class="chip live">organic</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Soft%20Knit%20Short%20Sleeve%20%26%20Pants%20Pajama%20Set">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Organic cotton bedding</h3>
-          <p class="what">Duvet covers and bedding layers in organic cotton.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20cotton%20bedding">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Organic cotton pillows</h3>
-          <p class="what">Sleep pillows stuffed and covered in organic cotton.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20cotton%20pillows">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Organic cotton blankets</h3>
-          <p class="what">Lightweight and layering blankets in organic cotton.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20cotton%20blankets">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Eye masks</h3>
-          <p class="what">Soft sleep masks for dark, uninterrupted nights.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Eye%20masks">Inquire</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="aisle" id="home">
-      <div class="aisle-head">
-        <h2>Home</h2>
-        <p>Bathroom extras, kitchen tools, and organify lanes. Cleaners and paper live in Cleaning.</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="photo">
-            <img src="img/home/coyuchi-cloud-loom-towels.jpg" alt="Cloud Loom™ Organic Towels" width="600" height="800" loading="lazy">
-          </div>
-          <h3>Cloud Loom™ Organic Towels</h3>
-          <p class="what">Coyuchi — official GOTS towel PDP (Undyed).</p>
-          <p class="fiber">GOTS 100% organic cotton</p>
-          <div class="row">
-            <span class="chip live">organic</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Cloud%20Loom%E2%84%A2%20Organic%20Towels">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Organic towels</h3>
-          <p class="what">Bath towels in certified organic cotton, pile to finish.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20towels">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Organic washcloths</h3>
-          <p class="what">Face and body cloths in organic cotton.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20washcloths">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Organic bath mats</h3>
-          <p class="what">Floor-side mats in organic fibers — no mystery blends.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20bath%20mats">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Organic cotton dish towels</h3>
-          <p class="what">Kitchen towels in organic cotton — no plastic-blend weaves.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20cotton%20dish%20towels">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Bamboo cutting boards</h3>
-          <p class="what">Kitchen boards from bamboo, not mystery composites.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Bamboo%20cutting%20boards">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Bamboo utensils</h3>
-          <p class="what">Cooking and serving tools in bamboo.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Bamboo%20utensils">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Reusable bags</h3>
-          <p class="what">Everyday carry bags meant to replace single-use plastic.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Reusable%20bags">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Reusable wraps</h3>
-          <p class="what">Food wraps that stand in for plastic film.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Reusable%20wraps">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Fair-trade</h3>
-          <p class="what">A lane for goods made under fair-trade standards.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Fair-trade">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>B-certified</h3>
-          <p class="what">A lane for B Corp and B-certified makers.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20B-certified">Inquire</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48"><path d="M16 12h16v6H16z"/><path d="M14 18h20v18H14z"/></svg>
-          </div>
-          <h3>Household swaps</h3>
-          <p class="what">A lane for everyday swaps that replace conventional household goods.</p>
-          <div class="row">
-            <span class="chip">vetting</span>
-            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Household%20swaps">Inquire</a>
-          </div>
-        </article>
-      </div>
-    </section>
-    <footer>
+        <footer>
       <p class="foot-brand">EKOTOPIA</p>
       <ul>
         <li><a href="mailto:powerplantog@gmail.com">powerplantog@gmail.com</a></li>
