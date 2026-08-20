@@ -70,6 +70,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
       gap: 12px;
       padding: 14px 0 12px;
       background: color-mix(in srgb, var(--cream) 88%, transparent);
@@ -111,6 +112,48 @@
       color: var(--muted);
       font-size: 0.82rem;
       max-width: 42ch;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .ig-follow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 42px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--olive-deep);
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .ig-follow svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    .ig-follow:hover,
+    .ig-follow:focus-visible {
+      border-color: var(--olive);
+      background: #e8eadc;
+    }
+
+    .ig-follow-inline {
+      min-height: 0;
+      margin-top: 8px;
+      padding: 5px 10px;
+      font-size: 0.74rem;
     }
 
     .inquire-cta {
@@ -249,6 +292,10 @@
       font-family: Fraunces, Georgia, serif;
       font-size: clamp(1.5rem, 4vw, 2rem);
       font-weight: 600;
+    }
+
+    .aisle-title {
+      min-width: 0;
     }
 
     .aisle-head p {
@@ -580,6 +627,89 @@
       font-size: 0.88rem;
     }
 
+    .card[id] {
+      scroll-margin-top: 132px;
+    }
+
+    .ig-block {
+      margin: 0 0 28px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--paper);
+    }
+
+    .ig-block-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .ig-block-head h3 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.15rem, 3vw, 1.4rem);
+      font-weight: 600;
+    }
+
+    .ig-block-head p {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      max-width: 52ch;
+    }
+
+    .ig-block-head a {
+      color: var(--olive-deep);
+    }
+
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .ig-tile {
+      position: relative;
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #eee8dc;
+      text-decoration: none;
+      color: var(--paper);
+    }
+
+    .ig-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+
+    .ig-tile span {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 22px 8px 8px;
+      background: linear-gradient(180deg, transparent, rgba(42, 36, 28, 0.78));
+      font-size: 0.68rem;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    .ig-tile:hover img,
+    .ig-tile:focus-visible img {
+      transform: scale(1.03);
+    }
+
+    @media (min-width: 640px) {
+      .ig-tile span { font-size: 0.78rem; padding: 28px 10px 10px; }
+    }
+
     .chip.flagged {
       background: #f3e6d4;
       color: var(--clay-deep);
@@ -612,7 +742,13 @@
         </div>
         <p>The online ecotopia — organic fashion worldwide. Catalog + inquire.</p>
       </div>
-      <a class="inquire-cta" href="mailto:powerplantog@gmail.com">Inquire</a>
+      <div class="header-actions">
+        <a class="ig-follow" href="https://www.instagram.com/priceless.venice/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/></svg>
+          <span>@priceless.venice</span>
+        </a>
+        <a class="inquire-cta" href="mailto:powerplantog@gmail.com">Inquire</a>
+      </div>
     </header>
 
     <section class="hero">
@@ -628,6 +764,7 @@
 
     <nav class="cats" aria-label="Shop categories">
       <a href="#wear">Wear</a>
+      <a href="#baby">Baby</a>
       <a href="/priceless/grocery/">Grocery</a>
       <a href="#cleaning">Cleaning</a>
       <a href="#sleep">Sleep</a>
@@ -662,8 +799,60 @@
 
     <section class="aisle" id="wear">
       <div class="aisle-head">
-        <h2>Wear</h2>
+        <div class="aisle-title">
+          <h2>Wear</h2>
+          <a class="ig-follow ig-follow-inline" href="https://www.instagram.com/priceless.venice/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/></svg>
+            <span>Follow @priceless.venice</span>
+          </a>
+        </div>
         <p>Organic fashion from all brands all over the world. Accepted wholesale catalogs with pictures — Italy, Canada, Nepal, Santa Cruz. Catalog + inquire — no checkout, no prices.</p>
+      </div>
+      <div class="ig-block" id="instagram">
+        <div class="ig-block-head">
+          <div>
+            <h3>Instagram</h3>
+            <p>Official Wear photos — adult clothes plus the baby socks on the aisle. Follow <a href="https://www.instagram.com/priceless.venice/" target="_blank" rel="noopener noreferrer">@priceless.venice</a> for organic clothes, baby clothes, and baby bedding.</p>
+          </div>
+        </div>
+        <div class="ig-grid" aria-label="PRICELESS Wear photos from the catalog">
+          <a class="ig-tile" href="#classic-tank">
+            <img src="img/wear/casagin/classic-tank.jpg" alt="Classic tank top in natural fabric" width="600" height="600" loading="lazy">
+            <span>Classic tank top in natural fabric</span>
+          </a>
+          <a class="ig-tile" href="#daisy-dress">
+            <img src="img/wear/nomads/daisy-dress.jpg" alt="Daisy Dress (Hemp Lyocell)" width="600" height="600" loading="lazy">
+            <span>Daisy Dress (Hemp Lyocell)</span>
+          </a>
+          <a class="ig-tile" href="#hemp-baby-socks">
+            <img src="img/wear/royal-hemp/hemp-baby-socks.jpg" alt="Hemp Baby Socks" width="600" height="600" loading="lazy">
+            <span>Hemp Baby Socks</span>
+          </a>
+          <a class="ig-tile" href="#tencel-leggings">
+            <img src="img/wear/casagin/leggings.jpg" alt="TENCEL Leggings" width="600" height="600" loading="lazy">
+            <span>TENCEL Leggings</span>
+          </a>
+          <a class="ig-tile" href="#elektra-dress">
+            <img src="img/wear/nomads/elektra-dress.jpg" alt="Elektra Dress (bamboo + organic cotton Melange)" width="600" height="600" loading="lazy">
+            <span>Elektra Dress (bamboo + organic cotton Melange)</span>
+          </a>
+          <a class="ig-tile" href="#half-sleeve-tshirt">
+            <img src="img/wear/royal-hemp/half-sleeve-tshirt.jpg" alt="Half Sleeve Hemp Knitted Tshirt" width="600" height="600" loading="lazy">
+            <span>Half Sleeve Hemp Knitted Tshirt</span>
+          </a>
+          <a class="ig-tile" href="#chi-jean">
+            <img src="img/wear/dash-hemp/chi-jean.jpg" alt="Chi Gusseted Hemp Jean" width="600" height="600" loading="lazy">
+            <span>Chi Gusseted Hemp Jean</span>
+          </a>
+          <a class="ig-tile" href="#cabo-hoodie">
+            <img src="img/wear/dash-hemp/cabo-hoodie.jpg" alt="Cabo Unisex French Terry Hemp Hoodie" width="600" height="600" loading="lazy">
+            <span>Cabo Unisex French Terry Hemp Hoodie</span>
+          </a>
+          <a class="ig-tile" href="#camp-cruz">
+            <img src="img/wear/dash-hemp/camp-cruz.jpg" alt="Camp Cruz 100% Hemp Shirt" width="600" height="600" loading="lazy">
+            <span>Camp Cruz 100% Hemp Shirt</span>
+          </a>
+        </div>
       </div>
       <div class="brand-line">
         <h3>CASAGiN (Italy)</h3>
@@ -714,7 +903,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Men%27s%20TENCEL%20briefs">Inquire</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="classic-tank">
           <div class="photo">
             <img src="img/wear/casagin/classic-tank.jpg" alt="Classic tank top in natural fabric" width="600" height="800" loading="lazy">
           </div>
@@ -824,7 +1013,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Long-sleeved%20TENCEL%20turtleneck">Inquire</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="tencel-leggings">
           <div class="photo">
             <img src="img/wear/casagin/leggings.jpg" alt="TENCEL Leggings" width="600" height="800" loading="lazy">
           </div>
@@ -864,7 +1053,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Goa%20Bra%20%2B%20Undies%20(Tie%20Dye%20Hemp%20Lyocell)">Inquire</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="daisy-dress">
           <div class="photo">
             <img src="img/wear/nomads/daisy-dress.jpg" alt="Daisy Dress (Hemp Lyocell)" width="600" height="800" loading="lazy">
           </div>
@@ -888,7 +1077,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Nova%20Dress%20(Tie%20Dye%20Hemp%20Lyocell)">Inquire</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="elektra-dress">
           <div class="photo">
             <img src="img/wear/nomads/elektra-dress.jpg" alt="Elektra Dress (bamboo + organic cotton Melange)" width="600" height="800" loading="lazy">
           </div>
@@ -1062,7 +1251,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Full%20Socks">Inquire</a>
           </div>
         </article>
-        <article class="card featured">
+        <article class="card featured" id="hemp-baby-socks">
           <div class="photo">
             <img src="img/wear/royal-hemp/hemp-baby-socks.jpg" alt="Hemp Baby Socks" width="600" height="800" loading="lazy">
           </div>
@@ -1079,7 +1268,7 @@
         <p>The rest of the official fashion catalog that exists on royalhempnepal.com.</p>
       </div>
       <div class="grid">
-        <article class="card">
+        <article class="card" id="half-sleeve-tshirt">
           <div class="photo">
             <img src="img/wear/royal-hemp/half-sleeve-tshirt.jpg" alt="Half Sleeve Hemp Knitted Tshirt" width="600" height="800" loading="lazy">
           </div>
@@ -1206,7 +1395,7 @@
         <p>Wholesale catalog — line sheets received May 2026. Dash Hemp Santa Cruz, 303 Potrero St. Named hemp clothing only. Official photos from dashhemp.com.</p>
       </div>
       <div class="grid">
-        <article class="card">
+        <article class="card" id="chi-jean">
           <div class="photo">
             <img src="img/wear/dash-hemp/chi-jean.jpg" alt="Chi Gusseted Hemp Jean" width="600" height="800" loading="lazy">
           </div>
@@ -1228,7 +1417,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Nuccio%20Five%20Pocket%20Hemp%20Jean">Inquire</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="cabo-hoodie">
           <div class="photo">
             <img src="img/wear/dash-hemp/cabo-hoodie.jpg" alt="Cabo Unisex French Terry Hemp Hoodie" width="600" height="800" loading="lazy">
           </div>
@@ -1294,7 +1483,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Mazatlan%20100%25%20Hemp%20Woven%20Pant">Inquire</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card" id="camp-cruz">
           <div class="photo">
             <img src="img/wear/dash-hemp/camp-cruz.jpg" alt="Camp Cruz 100% Hemp Shirt" width="600" height="800" loading="lazy">
           </div>
@@ -1318,6 +1507,27 @@
         </article>
       </div>
       <p class="aisle-note">More wholesale clothing catalogs posting as acceptances land.</p>
+    </section>
+
+    <section class="aisle" id="baby">
+      <div class="aisle-head">
+        <h2>Baby clothes + bedding</h2>
+        <p>Accepted baby items only. Catalog + inquire — no checkout, no prices.</p>
+      </div>
+      <div class="grid">
+        <article class="card featured">
+          <div class="photo">
+            <img src="img/wear/royal-hemp/hemp-baby-socks.jpg" alt="Hemp Baby Socks" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Hemp Baby Socks</h3>
+          <p class="what">Royal Hemp Enterprises — hemp baby socks. Textile only.</p>
+          <div class="row">
+            <span class="chip live">wholesale</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=PRICELESS%20inquiry%20%E2%80%94%20Hemp%20Baby%20Socks">Inquire</a>
+          </div>
+        </article>
+      </div>
+      <p class="aisle-note">More baby clothes and baby bedding post as wholesale catalogs land.</p>
     </section>
 
     <section class="aisle" id="cleaning">
@@ -1714,6 +1924,7 @@
       <p class="foot-brand">PRICELESS</p>
       <ul>
         <li><a href="mailto:powerplantog@gmail.com">powerplantog@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/priceless.venice/" target="_blank" rel="noopener noreferrer">Instagram @priceless.venice</a></li>
         <li>online only</li>
         <li>no fake checkout</li>
         <li><a href="https://blessedtouchla.com/links/">back to links</a></li>
