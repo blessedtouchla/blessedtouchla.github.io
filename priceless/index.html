@@ -30,10 +30,12 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
       min-height: 100%;
+      overflow-x: hidden;
       background:
         radial-gradient(ellipse 80% 50% at 100% -10%, rgba(196, 164, 108, 0.16), transparent 50%),
         radial-gradient(ellipse 60% 40% at -10% 20%, rgba(92, 106, 71, 0.1), transparent 45%),
@@ -72,6 +74,8 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 12px;
+      width: 100%;
+      max-width: 100%;
       padding: 14px 0 12px;
       background: color-mix(in srgb, var(--cream) 88%, transparent);
       backdrop-filter: blur(12px);
@@ -236,21 +240,17 @@
 
     .cats {
       position: sticky;
-      top: 72px;
+      top: var(--header-h, 72px);
       z-index: 20;
       display: flex;
+      flex-wrap: wrap;
       gap: 8px;
-      overflow-x: auto;
+      overflow: visible;
       padding: 10px 0 14px;
-      margin: 0 -16px;
-      padding-left: 16px;
-      padding-right: 16px;
+      margin: 0;
       background: color-mix(in srgb, var(--cream) 92%, transparent);
       backdrop-filter: blur(10px);
-      scrollbar-width: none;
     }
-
-    .cats::-webkit-scrollbar { display: none; }
 
     .cats a {
       flex: 0 0 auto;
@@ -275,7 +275,7 @@
 
     section.aisle {
       padding: 36px 0 8px;
-      scroll-margin-top: 132px;
+      scroll-margin-top: calc(var(--header-h, 72px) + 56px);
     }
 
     .aisle-head {
@@ -443,9 +443,29 @@
       margin-top: 10px;
     }
 
+    @media (max-width: 639px) {
+      .site-header {
+        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 10px;
+      }
+      .brand p { display: none; }
+      .header-actions {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+      .cats {
+        position: static;
+        top: auto;
+        z-index: 1;
+      }
+      section.aisle { scroll-margin-top: calc(var(--header-h, 96px) + 12px); }
+    }
+
     @media (min-width: 640px) {
       .page { padding-left: 24px; padding-right: 24px; }
-      .cats { margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; }
       .grid { grid-template-columns: repeat(2, 1fr); }
       .brand p { font-size: 0.88rem; }
     }
@@ -816,7 +836,8 @@
       gap: 8px;
     }
 
-    .cut-btn {
+    .cut-btn,
+    .beauty-cut-btn {
       appearance: none;
       border: 1px solid var(--line);
       background: #f7f2e8;
@@ -829,14 +850,35 @@
     }
 
     .cut-btn:hover,
-    .cut-btn:focus-visible {
+    .cut-btn:focus-visible,
+    .beauty-cut-btn:hover,
+    .beauty-cut-btn:focus-visible {
       border-color: var(--olive);
     }
 
-    .cut-btn.is-on {
+    .cut-btn.is-on,
+    .beauty-cut-btn.is-on {
       background: #e4ead4;
       border-color: var(--olive);
       color: var(--olive-deep);
+    }
+
+    .beauty-shell {
+      margin: 8px 0 18px;
+      padding: 12px 0 2px;
+    }
+
+    .beauty-shell h3 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.1rem, 3vw, 1.35rem);
+      font-weight: 600;
+    }
+
+    .beauty-shell p {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      max-width: 62ch;
     }
 
     .cut-status {
@@ -847,13 +889,19 @@
     }
 
     body.is-cut .cut-status { display: block; }
+    body.is-beauty-cut #beauty-cut-status { display: block; }
     body.is-cut .ig-block,
     body.is-cut .cat-tiles,
     body.is-cut .aisle-note { display: none; }
     .card.is-hidden,
     .brand-line.is-hidden,
     .grid.is-hidden,
-    .aisle.is-hidden { display: none; }
+    .aisle.is-hidden,
+    .beauty-shell.is-hidden,
+    .card.is-beauty-hidden,
+    .brand-line.is-beauty-hidden,
+    .grid.is-beauty-hidden,
+    .beauty-shell.is-beauty-hidden { display: none; }
   </style>
 </head>
 <body>
@@ -3793,14 +3841,37 @@
     <section class="aisle" id="beauty">
       <div class="aisle-head">
         <h2>Beauty</h2>
-        <p>Named body, face, SPF, cotton rounds, and official doTERRA skin / topical from official brand pages. Clothes and baby stay first. Household stays larger than grocery.</p>
+        <p>Named body, face, SPF, cotton rounds, and official doTERRA skin / topical from official brand pages. Shop by type below. Clothes and baby stay first. Household stays larger than grocery.</p>
+      </div>
+      <div class="beauty-types cut-group">
+        <p class="cut-label">Shop by type</p>
+        <div class="cut-row">
+          <button type="button" class="beauty-cut-btn" data-beauty-cut="face">Face / facial cleansing</button>
+          <button type="button" class="beauty-cut-btn" data-beauty-cut="makeup">Makeup</button>
+          <button type="button" class="beauty-cut-btn" data-beauty-cut="hair">Hair</button>
+          <button type="button" class="beauty-cut-btn" data-beauty-cut="body">Body + skin balm</button>
+          <button type="button" class="beauty-cut-btn" data-beauty-cut="spf">SPF</button>
+          <button type="button" class="beauty-cut-btn" data-beauty-cut="deodorant">Deodorant</button>
+          <button type="button" class="beauty-cut-btn" data-beauty-cut="lips">Lips</button>
+          <button type="button" class="beauty-cut-btn" data-beauty-cut="oral">Oral</button>
+          <button type="button" class="beauty-cut-btn" data-beauty-cut="hands">Hands</button>
+        </div>
+        <p class="cut-status" id="beauty-cut-status"></p>
+      </div>
+      <div class="beauty-shell" data-beauty-shell="makeup" id="beauty-makeup">
+        <h3>Makeup</h3>
+        <p>Makeup posts when the list lands.</p>
+      </div>
+      <div class="beauty-shell" data-beauty-shell="hair" id="beauty-hair">
+        <h3>Hair</h3>
+        <p>Dedicated shampoo and conditioner post when the list lands. Dr. Bronner&#x27;s Peppermint Pure-Castile stays under Body + skin balm as 18-in-1 / as labeled — not retitled as shampoo.</p>
       </div>
       <div class="brand-line">
         <h3>Dr. Bronner&#x27;s</h3>
         <p>Official drbronner.com. Organic oils and fair trade only where that opened PDP says so. USDA Organic only on the Peppermint lip balm — that PDP names USDA NOP. Lotion and toothpaste stay off a USDA Organic tag.</p>
       </div>
       <div class="grid">
-        <article class="card" id="bronner-peppermint-castile-beauty" data-fairtrade="yes">
+        <article class="card" id="bronner-peppermint-castile-beauty" data-fairtrade="yes" data-beauty="body">
           <div class="photo">
             <img src="img/cleaning/bronner-peppermint-castile.jpg" alt="Peppermint - Pure-Castile Magic Soap" width="600" height="800" loading="lazy">
           </div>
@@ -3812,7 +3883,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Peppermint%20-%20Pure-Castile%20Magic%20Soap">Inquire</a>
           </div>
         </article>
-        <article class="card" id="bronner-peppermint-castile-bar" data-fairtrade="yes">
+        <article class="card" id="bronner-peppermint-castile-bar" data-fairtrade="yes" data-beauty="body">
           <div class="photo">
             <img src="img/beauty/bronner-peppermint-castile-bar.jpg" alt="Peppermint - Pure-Castile Magic Bar Soap" width="600" height="800" loading="lazy">
           </div>
@@ -3824,7 +3895,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Peppermint%20-%20Pure-Castile%20Magic%20Bar%20Soap">Inquire</a>
           </div>
         </article>
-        <article class="card" id="bronner-peppermint-organic-lotion" data-fairtrade="yes">
+        <article class="card" id="bronner-peppermint-organic-lotion" data-fairtrade="yes" data-beauty="body">
           <div class="photo">
             <img src="img/beauty/bronner-peppermint-organic-lotion.jpg" alt="Peppermint - Organic Lotions" width="600" height="800" loading="lazy">
           </div>
@@ -3836,7 +3907,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Peppermint%20-%20Organic%20Lotions">Inquire</a>
           </div>
         </article>
-        <article class="card" id="bronner-peppermint-organic-lip-balm" data-fairtrade="yes">
+        <article class="card" id="bronner-peppermint-organic-lip-balm" data-fairtrade="yes" data-beauty="lips">
           <div class="photo">
             <img src="img/beauty/bronner-peppermint-organic-lip-balm.jpg" alt="Peppermint - Organic Lip Balms" width="600" height="800" loading="lazy">
           </div>
@@ -3848,7 +3919,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Peppermint%20-%20Organic%20Lip%20Balms">Inquire</a>
           </div>
         </article>
-        <article class="card" id="bronner-peppermint-toothpaste" data-fairtrade="yes">
+        <article class="card" id="bronner-peppermint-toothpaste" data-fairtrade="yes" data-beauty="oral">
           <div class="photo">
             <img src="img/beauty/bronner-peppermint-all-one-toothpaste.jpg" alt="Peppermint - All-One Toothpaste" width="600" height="800" loading="lazy">
           </div>
@@ -3866,7 +3937,7 @@
         <p>Official weleda.com. NATRUE only — not USDA Organic.</p>
       </div>
       <div class="grid">
-        <article class="card" id="weleda-skin-food-cleanser">
+        <article class="card" id="weleda-skin-food-cleanser" data-beauty="face">
           <div class="photo">
             <img src="img/beauty/weleda-skin-food-oil-to-milk-cleanser.jpg" alt="Skin Food Face Care Nourishing 2-in-1 Cleanser &amp; Mask" width="600" height="800" loading="lazy">
           </div>
@@ -3878,7 +3949,7 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Weleda%20Skin%20Food%20Face%20Care%20Nourishing%202-in-1%20Cleanser%20%26%20Mask">Inquire</a>
           </div>
         </article>
-        <article class="card featured" id="weleda-citrus-deodorant">
+        <article class="card featured" id="weleda-citrus-deodorant" data-beauty="deodorant">
           <div class="photo">
             <img src="img/beauty/weleda-citrus-deodorant.jpg" alt="Citrus Deodorant" width="600" height="800" loading="lazy">
           </div>
@@ -3896,7 +3967,7 @@
         <p>Official skyorganics.com. Organic cotton rounds only. No GOTS wording on this tile.</p>
       </div>
       <div class="grid">
-        <article class="card" id="sky-organics-cotton-rounds" data-fabric="organic-cotton">
+        <article class="card" id="sky-organics-cotton-rounds" data-fabric="organic-cotton" data-beauty="face">
           <div class="photo">
             <img src="img/beauty/sky-organics-organic-cotton-rounds.jpg" alt="Organic Cotton Rounds" width="600" height="800" loading="lazy">
           </div>
@@ -3914,7 +3985,7 @@
         <p>Official badgerbalm.com Active Mineral SPF 30. Zinc only. No USDA or EWG stamp — that opened PDP did not show one.</p>
       </div>
       <div class="grid">
-        <article class="card" id="badger-active-mineral-spf-30">
+        <article class="card" id="badger-active-mineral-spf-30" data-beauty="spf">
           <div class="photo">
             <img src="img/beauty/badger-active-mineral-spf-30.jpg" alt="Active Mineral Sunscreen Cream - SPF 30" width="600" height="800" loading="lazy">
           </div>
@@ -3932,7 +4003,7 @@
         <p>Official bushmedijina.com.au. Skin balm only. As labeled. No USDA Organic stamp on this balm. No Yaye.</p>
       </div>
       <div class="grid">
-        <article class="card" id="bush-medijina-miracle-balm" data-indigenous="yes">
+        <article class="card" id="bush-medijina-miracle-balm" data-indigenous="yes" data-beauty="body">
           <div class="photo">
             <img src="img/beauty/bush-medijina-miracle-balm.jpg" alt="Miracle Balm" width="600" height="800" loading="lazy">
           </div>
@@ -3950,7 +4021,7 @@
         <p>Official doterra.com. Skin and topical only on this aisle. CPTG is not USDA Organic. As labeled. Buy links use the official OwnerID sponsor parameter.</p>
       </div>
       <div class="grid">
-        <article class="card" id="doterra-verage">
+        <article class="card" id="doterra-verage" data-beauty="face">
           <div class="photo">
             <img src="img/doterra/verage-collection.jpg" alt="Verage Skin Care Collection" width="600" height="800" loading="lazy">
           </div>
@@ -3966,7 +4037,7 @@
             </span>
           </div>
         </article>
-        <article class="card" id="doterra-verage-cleanser">
+        <article class="card" id="doterra-verage-cleanser" data-beauty="face">
           <div class="photo">
             <img src="img/doterra/verage-cleanser.jpg" alt="Verage Cleanser" width="600" height="800" loading="lazy">
           </div>
@@ -3982,7 +4053,7 @@
             </span>
           </div>
         </article>
-        <article class="card" id="doterra-hd-clear">
+        <article class="card" id="doterra-hd-clear" data-beauty="face">
           <div class="photo">
             <img src="img/doterra/hd-clear.jpg" alt="HD Clear Topical Blend" width="600" height="800" loading="lazy">
           </div>
@@ -3998,7 +4069,7 @@
             </span>
           </div>
         </article>
-        <article class="card" id="doterra-facial-cleanser">
+        <article class="card" id="doterra-facial-cleanser" data-beauty="face">
           <div class="photo">
             <img src="img/doterra/facial-cleanser.jpg" alt="Facial Cleanser" width="600" height="800" loading="lazy">
           </div>
@@ -4014,7 +4085,7 @@
             </span>
           </div>
         </article>
-        <article class="card" id="doterra-onguard-toothpaste">
+        <article class="card" id="doterra-onguard-toothpaste" data-beauty="oral">
           <div class="photo">
             <img src="img/doterra/onguard-toothpaste.jpg" alt="doTERRA On Guard Natural Whitening Toothpaste" width="600" height="800" loading="lazy">
           </div>
@@ -4030,7 +4101,7 @@
             </span>
           </div>
         </article>
-        <article class="card" id="doterra-onguard-foaming-hand-wash-beauty">
+        <article class="card" id="doterra-onguard-foaming-hand-wash-beauty" data-beauty="hands">
           <div class="photo">
             <img src="img/doterra/onguard-hand-wash.jpg" alt="doTERRA On Guard Foaming Hand Wash" width="600" height="800" loading="lazy">
           </div>
@@ -4046,7 +4117,7 @@
             </span>
           </div>
         </article>
-        <article class="card" id="doterra-onguard-sanitizing-mist-beauty">
+        <article class="card" id="doterra-onguard-sanitizing-mist-beauty" data-beauty="hands">
           <div class="photo">
             <img src="img/doterra/onguard-mist.jpg" alt="doTERRA On Guard Hand Sanitizing Mist" width="600" height="800" loading="lazy">
           </div>
@@ -4062,7 +4133,7 @@
             </span>
           </div>
         </article>
-        <article class="card" id="doterra-onguard-hand-wash-kit">
+        <article class="card" id="doterra-onguard-hand-wash-kit" data-beauty="hands">
           <div class="photo">
             <img src="img/doterra/on-guard-hand-wash-kit.jpg" alt="doTERRA On Guard Hand Wash Kit" width="600" height="800" loading="lazy">
           </div>
@@ -4566,6 +4637,15 @@
   </div>
   <script>
     const header = document.querySelector(".site-header");
+    const setHeaderH = () => {
+      if (!header) return;
+      document.documentElement.style.setProperty("--header-h", header.offsetHeight + "px");
+    };
+    setHeaderH();
+    if (header && "ResizeObserver" in window) {
+      new ResizeObserver(setHeaderH).observe(header);
+    }
+    window.addEventListener("resize", setHeaderH);
     const chips = [...document.querySelectorAll(".cats a")];
     const aisles = chips.map((chip) => {
       const href = chip.getAttribute("href");
@@ -4635,6 +4715,9 @@
         const any = cards.some((card) => !card.classList.contains("is-hidden"));
         aisle.classList.toggle("is-hidden", Boolean(cut) && !any);
       });
+      document.querySelectorAll(".beauty-shell").forEach((shell) => {
+        shell.classList.toggle("is-hidden", Boolean(cut));
+      });
       if (cutStatus) {
         const count = document.querySelectorAll("section.aisle:not(#featured) .card:not(.is-hidden)").length;
         cutStatus.textContent = cut
@@ -4654,9 +4737,72 @@
 
     cutButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
+        applyBeautyType("");
         const next = btn.classList.contains("is-on") ? "" : btn.dataset.cut;
         setCut(next, true);
         document.getElementById("specialty").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    const beautyAisle = document.getElementById("beauty");
+    const beautyButtons = [...document.querySelectorAll(".beauty-cut-btn")];
+    const beautyStatus = document.getElementById("beauty-cut-status");
+    const beautyLabels = {
+      face: "Face / facial cleansing",
+      makeup: "Makeup",
+      hair: "Hair",
+      body: "Body + skin balm",
+      spf: "SPF",
+      deodorant: "Deodorant",
+      lips: "Lips",
+      oral: "Oral",
+      hands: "Hands"
+    };
+
+    const applyBeautyType = (type) => {
+      document.body.classList.toggle("is-beauty-cut", Boolean(type));
+      beautyButtons.forEach((btn) => btn.classList.toggle("is-on", btn.dataset.beautyCut === type));
+      if (!beautyAisle) return;
+      beautyAisle.querySelectorAll(".card").forEach((card) => {
+        const match = !type || card.getAttribute("data-beauty") === type;
+        card.classList.toggle("is-beauty-hidden", Boolean(type) && !match);
+      });
+      beautyAisle.querySelectorAll(".brand-line").forEach((line) => {
+        const grid = line.nextElementSibling;
+        if (!grid || !grid.classList.contains("grid")) return;
+        const cards = [...grid.querySelectorAll(".card")];
+        const any = cards.some((card) => !card.classList.contains("is-beauty-hidden") && !card.classList.contains("is-hidden"));
+        const hide = Boolean(type) && !any;
+        line.classList.toggle("is-beauty-hidden", hide);
+        grid.classList.toggle("is-beauty-hidden", hide);
+      });
+      beautyAisle.querySelectorAll(".beauty-shell").forEach((shell) => {
+        const show = !type || shell.getAttribute("data-beauty-shell") === type;
+        shell.classList.toggle("is-beauty-hidden", !show);
+      });
+      if (beautyStatus) {
+        beautyStatus.textContent = type
+          ? (type === "makeup" || type === "hair"
+              ? beautyLabels[type] + ". Products post when the list lands."
+              : "Showing " + (beautyLabels[type] || type) + ".")
+          : "";
+      }
+    };
+
+    const setBeautyType = (type, push) => {
+      applyBeautyType(type);
+      if (!push) return;
+      const url = new URL(window.location.href);
+      url.hash = type ? "beauty-type-" + type : "beauty";
+      history.replaceState(null, "", url);
+    };
+
+    beautyButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        applyCut("");
+        const next = btn.classList.contains("is-on") ? "" : btn.dataset.beautyCut;
+        setBeautyType(next, true);
+        beautyAisle.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
 
@@ -4669,9 +4815,27 @@
       return known.includes(mapped) ? mapped : "";
     };
 
+    const readHashBeauty = () => {
+      const hash = decodeURIComponent(location.hash.replace("#", ""));
+      if (!hash.startsWith("beauty-type-")) return "";
+      const type = hash.slice("beauty-type-".length);
+      return beautyLabels[type] ? type : "";
+    };
+
+    const bootBeauty = readHashBeauty();
     const bootCut = readHashCut();
-    if (bootCut) applyCut(bootCut);
-    window.addEventListener("hashchange", () => applyCut(readHashCut()));
+    if (bootBeauty) applyBeautyType(bootBeauty);
+    else if (bootCut) applyCut(bootCut);
+    window.addEventListener("hashchange", () => {
+      const beauty = readHashBeauty();
+      if (beauty) {
+        applyCut("");
+        applyBeautyType(beauty);
+        return;
+      }
+      applyBeautyType("");
+      applyCut(readHashCut());
+    });
   </script>
 </body>
 </html>
