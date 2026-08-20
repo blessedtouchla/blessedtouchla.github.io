@@ -518,6 +518,7 @@
 
     .aisle-tile.cleaning {
       background: linear-gradient(160deg, #efe4d4, var(--paper));
+      min-height: 160px;
     }
 
     .aisle-tile.sleep {
@@ -526,6 +527,7 @@
 
     .aisle-tile.home {
       background: linear-gradient(160deg, #eadfd0, var(--paper));
+      min-height: 160px;
     }
 
     .aisle-tile.baby {
@@ -731,6 +733,11 @@
       font-size: 1.1rem;
     }
 
+    .aisle-tile.home strong,
+    .aisle-tile.cleaning strong {
+      font-size: 1.42rem;
+    }
+
     .chip.bestseller {
       background: #e4ead4;
       color: var(--live);
@@ -747,6 +754,8 @@
       .aisle-tiles { grid-template-columns: repeat(2, 1fr); }
       .aisle-tile.wear,
       .aisle-tile.baby { grid-column: 1 / -1; min-height: 168px; }
+      .aisle-tile.home,
+      .aisle-tile.cleaning { min-height: 156px; }
       .aisle-tile.grocery { grid-column: auto; min-height: 112px; }
       .cat-tiles { grid-template-columns: repeat(4, 1fr); }
     }
@@ -756,7 +765,9 @@
       .aisle-tile.wear,
       .aisle-tile.baby { grid-column: span 2; min-height: 176px; }
       .aisle-tile { min-height: 176px; }
-      .aisle-tile.grocery { min-height: 132px; }
+      .aisle-tile.home,
+      .aisle-tile.cleaning { min-height: 176px; }
+      .aisle-tile.grocery { min-height: 120px; }
     }
 
     .specialty {
@@ -895,11 +906,11 @@
         </a>
         <a class="aisle-tile home" href="#home">
           <strong>Home</strong>
-          <span>Towels and household layers.</span>
+          <span>Household first after clothes — Coyuchi towels, washcloths, and kitchen layers.</span>
         </a>
         <a class="aisle-tile cleaning" href="#cleaning">
           <strong>Cleaning</strong>
-          <span>Plant-based cleaners and tree-free paper.</span>
+          <span>Larger than grocery — Castile, Branch Basics, and tree-free paper.</span>
         </a>
         <a class="aisle-tile grocery" href="/priceless/grocery/">
           <strong>Grocery</strong>
@@ -1043,13 +1054,13 @@
             <a class="card-link" href="#wild-floral">See in aisle</a>
           </div>
         </article>
-        <article class="card featured" data-fabric="organic-cotton">
+        <article class="card featured" data-fabric="organic-cotton" data-country="turkey">
           <div class="photo">
             <img src="img/home/coyuchi-cloud-loom-towels.jpg" alt="Cloud Loom™ Organic Towels" width="600" height="800" loading="lazy">
           </div>
           <h3>Cloud Loom™ Organic Towels</h3>
           <p class="what">Coyuchi — official Best Seller on the brand page.</p>
-          <p class="fiber">GOTS 100% organic cotton</p>
+          <p class="fiber">GOTS 100% organic cotton · grown and woven in Turkey</p>
           <div class="row">
             <span class="chip live bestseller">bestseller</span>
             <a class="card-link" href="#cloud-loom-towels">See in aisle</a>
@@ -2701,19 +2712,43 @@
     <section class="aisle" id="home">
       <div class="aisle-head">
         <h2>Home</h2>
-        <p>Bathroom extras, kitchen tools, and organify lanes. Cleaners and paper live in Cleaning.</p>
+        <p>Coyuchi GOTS towels, washcloths, and kitchen towels first. Cleaners and paper live in Cleaning. Household reads larger than grocery.</p>
       </div>
       <div class="grid">
-        <article class="card featured" id="cloud-loom-towels" data-fabric="organic-cotton">
+        <article class="card featured" id="cloud-loom-towels" data-fabric="organic-cotton" data-country="turkey">
           <div class="photo">
             <img src="img/home/coyuchi-cloud-loom-towels.jpg" alt="Cloud Loom™ Organic Towels" width="600" height="800" loading="lazy">
           </div>
           <h3>Cloud Loom™ Organic Towels</h3>
-          <p class="what">Coyuchi — official Best Seller on the brand page (Undyed).</p>
-          <p class="fiber">GOTS 100% organic cotton</p>
+          <p class="what">Coyuchi — official Best Seller on the brand page (Undyed). Bath, hand, and washcloth sizes on that PDP.</p>
+          <p class="fiber">GOTS 100% organic cotton · grown and woven in Turkey</p>
           <div class="row">
             <span class="chip live bestseller">bestseller</span>
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Cloud%20Loom%E2%84%A2%20Organic%20Towels">Inquire</a>
+          </div>
+        </article>
+        <article class="card" id="cloud-loom-washcloth" data-fabric="organic-cotton" data-country="turkey">
+          <div class="photo">
+            <img src="img/home/coyuchi-cloud-loom-washcloth.jpg" alt="Cloud Loom™ Organic Wash Cloth" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Cloud Loom™ Organic Wash Cloth</h3>
+          <p class="what">Coyuchi — official Wash Cloth size on the Cloud Loom™ Organic Towels brand page.</p>
+          <p class="fiber">GOTS 100% organic cotton · grown and woven in Turkey</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Cloud%20Loom%E2%84%A2%20Organic%20Wash%20Cloth">Inquire</a>
+          </div>
+        </article>
+        <article class="card featured" id="coyuchi-waffle-kitchen-towels" data-fabric="organic-cotton" data-country="india" data-fairtrade="yes">
+          <div class="photo">
+            <img src="img/home/coyuchi-organic-waffle-kitchen-towels.jpg" alt="Organic Waffle Kitchen Towels, Set of 6" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Organic Waffle Kitchen Towels, Set of 6</h3>
+          <p class="what">Coyuchi — official Best Seller kitchen towels on the brand page (Tidepool).</p>
+          <p class="fiber">GOTS 100% organic cotton · grown and woven in India · Fair Trade</p>
+          <div class="row">
+            <span class="chip live bestseller">bestseller</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Organic%20Waffle%20Kitchen%20Towels%2C%20Set%20of%206">Inquire</a>
           </div>
         </article>
         <article class="card">
@@ -2848,7 +2883,7 @@
         <a class="cat-tile" href="#clean-surface"><strong>Surface</strong><span>Plant-based concentrates</span></a>
         <a class="cat-tile" href="#clean-laundry"><strong>Laundry</strong><span>Detergent and pods</span></a>
         <a class="cat-tile" href="#clean-hands"><strong>Hands</strong><span>Wash, gel, mist, lotion</span></a>
-        <a class="cat-tile" href="#clean-paper"><strong>Paper</strong><span>Tree-free bamboo bath tissue</span></a>
+        <a class="cat-tile" href="#clean-paper"><strong>Paper</strong><span>Tree-free bamboo TP and tissues</span></a>
       </div>
 
       <div class="brand-line subhead" id="clean-surface">
@@ -3014,34 +3049,46 @@
       </div>
       <div class="brand-line">
         <h3>Dr. Bronner&#x27;s</h3>
-        <p>Official drbronner.com Baby-Mild / unscented castile. Cleaning aisle.</p>
+        <p>Official drbronner.com 18-in-1 Pure-Castile. Made with Organic Oils — not a 95% USDA Organic product tag. Fair for Life where the opened PDP says it.</p>
       </div>
-<div class="grid">
+      <div class="grid">
         <article class="card" data-fairtrade="yes">
           <div class="photo">
             <img src="img/cleaning/bronner-unscented-castile.jpg" alt="Unscented - Pure-Castile Magic Soap" width="600" height="800" loading="lazy">
           </div>
           <h3>Unscented - Pure-Castile Magic Soap</h3>
-          <p class="what">Dr. Bronner&#x27;s — Baby-Mild / unscented castile. Official Fair for Life.</p>
-          <p class="fiber">Regenerative Organic Certified® oils</p>
+          <p class="what">Dr. Bronner&#x27;s — 18-in-1 Pure-Castile Baby-Mild / unscented. Official Fair for Life on the brand page.</p>
+          <p class="fiber">Made with Organic Oils · Fair for Life</p>
           <div class="row">
             <span class="chip live">named</span>
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Unscented%20-%20Pure-Castile%20Magic%20Soap">Inquire</a>
           </div>
         </article>
-</div>
+        <article class="card" data-fairtrade="yes">
+          <div class="photo">
+            <img src="img/cleaning/bronner-almond-castile.jpg" alt="Almond - Pure-Castile Magic Soap" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Almond - Pure-Castile Magic Soap</h3>
+          <p class="what">Dr. Bronner&#x27;s — 18-in-1 Pure-Castile Almond. Official Fair for Life on the brand page.</p>
+          <p class="fiber">Made with Organic Oils · Fair for Life</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Almond%20-%20Pure-Castile%20Magic%20Soap">Inquire</a>
+          </div>
+        </article>
+      </div>
       <div class="brand-line">
         <h3>Branch Basics</h3>
-        <p>Official branchbasics.com starter and concentrate.</p>
+        <p>Official branchbasics.com. EWG Verified and MADE SAFE only where that opened PDP says so — not USDA Organic. Laundry is The Concentrate diluted, not a second SKU.</p>
       </div>
-<div class="grid">
+      <div class="grid">
         <article class="card">
           <div class="photo">
             <img src="img/cleaning/branch-the-concentrate.jpg" alt="The Concentrate" width="600" height="800" loading="lazy">
           </div>
           <h3>The Concentrate</h3>
-          <p class="what">Branch Basics — official concentrate PDP.</p>
-          <p class="fiber">plant- and mineral-based concentrate</p>
+          <p class="what">Branch Basics — official concentrate. Dilute for surfaces and laundry; the opened PDP names a laundry refill at 64 loads.</p>
+          <p class="fiber">EWG Verified · MADE SAFE</p>
           <div class="row">
             <span class="chip live">named</span>
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20The%20Concentrate">Inquire</a>
@@ -3059,25 +3106,79 @@
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Premium%20Starter%20Kit">Inquire</a>
           </div>
         </article>
-</div>
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/branch-oxygen-boost.jpg" alt="Oxygen Boost" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Oxygen Boost</h3>
+          <p class="what">Branch Basics — official Oxygen Boost. Sodium bicarbonate and sodium percarbonate. Used with The Concentrate, including laundry on that PDP.</p>
+          <p class="fiber">two-ingredient mineral powder</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Oxygen%20Boost">Inquire</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="photo">
+            <img src="img/cleaning/branch-dishwasher-tablets.jpg" alt="Dishwasher Tablets" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Dishwasher Tablets</h3>
+          <p class="what">Branch Basics — official Dishwasher Tablets. EWG Verified on the opened page. Official ingredients list names TAED. Not USDA Organic.</p>
+          <p class="fiber">EWG Verified · contains TAED</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Dishwasher%20Tablets">Inquire</a>
+          </div>
+        </article>
+      </div>
       <div class="brand-line">
         <h3>Who Gives A Crap</h3>
-        <p>Official bamboo toilet paper. Gaia&#x27;s bamboo TP stays on the aisle.</p>
+        <p>Official bamboo toilet paper and tissues. Tree-free, FSC, and B Corp are paper claims — not a fabric tag. Gaia&#x27;s bamboo TP stays on the aisle.</p>
       </div>
-<div class="grid">
+      <div class="grid">
         <article class="card">
           <div class="photo">
             <img src="img/paper/wgac-bamboo-toilet-paper.jpg" alt="100% Bamboo Toilet Paper" width="600" height="800" loading="lazy">
           </div>
           <h3>100% Bamboo Toilet Paper</h3>
-          <p class="what">Who Gives A Crap — official bamboo bath tissue. Tree-free paper aisle.</p>
-          <p class="fiber">100% bamboo</p>
+          <p class="what">Who Gives A Crap — official 100% bamboo bath tissue. Tree-free paper aisle.</p>
+          <p class="fiber">100% bamboo · tree-free · FSC · B Corp</p>
           <div class="row">
             <span class="chip live">named</span>
             <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20100%25%20Bamboo%20Toilet%20Paper">Inquire</a>
           </div>
         </article>
-</div>
+        <article class="card">
+          <div class="photo">
+            <img src="img/paper/wgac-bamboo-tissues.jpg" alt="100% Bamboo Tissues" width="600" height="800" loading="lazy">
+          </div>
+          <h3>100% Bamboo Tissues</h3>
+          <p class="what">Who Gives A Crap — official 100% bamboo facial tissues. Tree-free paper aisle.</p>
+          <p class="fiber">100% bamboo · tree-free · FSC · B Corp</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20100%25%20Bamboo%20Tissues">Inquire</a>
+          </div>
+        </article>
+      </div>
+      <div class="brand-line">
+        <h3>Grove Co.</h3>
+        <p>Official grove.co tree-free bamboo toilet paper. FSC and no PFAS / BPA / chlorine bleach from that opened PDP — not USDA Organic. No Indigenous collection.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="photo">
+            <img src="img/paper/grove-3ply-bamboo-tp.jpg" alt="3-Ply Bamboo Toilet Paper (400 sheets per roll)" width="600" height="800" loading="lazy">
+          </div>
+          <h3>3-Ply Bamboo Toilet Paper (400 sheets per roll)</h3>
+          <p class="what">Grove Co. — official tree-free bamboo bath tissue. FSC-certified bamboo. Made without PFAS, BPA, or chlorine bleach. B Corp on that opened page.</p>
+          <p class="fiber">FSC · no PFAS / BPA / chlorine bleach · B Corp</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%203-Ply%20Bamboo%20Toilet%20Paper">Inquire</a>
+          </div>
+        </article>
+      </div>
     </section>
 
         <footer>
