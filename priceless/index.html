@@ -923,7 +923,7 @@
 
     <section class="specialty" id="specialty">
       <h2>Specialty collections</h2>
-      <p class="lede-mini">Filled research tags only. No guessed origin. No Indigenous-made collection. Organic hemp is Rawganique only. Organic linen is Rawganique only — shirts and underwear, not underwear-only. Nomads Hemp Wear stays off the Organic hemp and GOTS cuts. Made in USA is SONOMA V2 Natural, FRISCO, and Harvest &amp; Mill.</p>
+      <p class="lede-mini">Filled research tags only. No guessed origin. Indigenous-made is this one Equal Exchange coffee only — Embara Chambi / ASPROCAFE on that PDP. No other Indigenous tags. Organic hemp is Rawganique only. Organic linen is Rawganique only — shirts and underwear, not underwear-only. Nomads Hemp Wear stays off the Organic hemp and GOTS cuts. Made in USA is SONOMA V2 Natural, FRISCO, and Harvest &amp; Mill.</p>
       <div class="cut-group">
         <p class="cut-label">By fabric</p>
         <div class="cut-row">
@@ -942,12 +942,19 @@
           <button type="button" class="cut-btn" data-cut="country:pakistan">Pakistan</button>
           <button type="button" class="cut-btn" data-cut="country:vietnam">Vietnam</button>
           <button type="button" class="cut-btn" data-cut="country:europe">Europe</button>
+          <button type="button" class="cut-btn" data-cut="country:colombia">Colombia</button>
         </div>
       </div>
       <div class="cut-group">
         <p class="cut-label">Fair Trade</p>
         <div class="cut-row">
           <button type="button" class="cut-btn" data-cut="fairtrade:yes">Fair Trade</button>
+        </div>
+      </div>
+      <div class="cut-group">
+        <p class="cut-label">Indigenous-made</p>
+        <div class="cut-row">
+          <button type="button" class="cut-btn" data-cut="indigenous:yes">Indigenous-made</button>
         </div>
       </div>
       <p class="cut-status" id="cut-status"></p>
@@ -3775,6 +3782,27 @@
       </div>
     </section>
 
+    <section class="aisle" id="grocery-named">
+      <div class="aisle-head">
+        <h2>Grocery</h2>
+        <p>Smaller pantry door. One named coffee on this page. <a href="/priceless/grocery/">Full pantry</a>.</p>
+      </div>
+      <div class="grid">
+        <article class="card" id="ee-colombian-coffee" data-country="colombia" data-indigenous="yes">
+          <div class="photo">
+            <img src="img/grocery/equal-exchange-organic-colombian-coffee.jpg" alt="Organic Colombian Coffee, 12oz bag" width="600" height="800" loading="lazy">
+          </div>
+          <h3>Organic Colombian Coffee, 12oz bag</h3>
+          <p class="what">Equal Exchange — official Organic Colombian Coffee, 12oz bag. Certified Organic by Oregon Tilth. Embara Chambi / ASPROCAFE on the brand page (Indigenous roots). Riosucio, Colombia. Fair Trade is not on this opened PDP.</p>
+          <p class="fiber">Oregon Tilth organic · Colombia (Riosucio) · Embara Chambi / ASPROCAFE</p>
+          <div class="row">
+            <span class="chip live">named</span>
+            <a class="card-link" href="mailto:powerplantog@gmail.com?subject=EKOTOPIA%20inquiry%20%E2%80%94%20Equal%20Exchange%20Organic%20Colombian%20Coffee%2C%2012oz">Inquire</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
         <footer>
       <p class="foot-brand">EKOTOPIA</p>
       <ul>
@@ -3820,13 +3848,15 @@
       "country:pakistan": "Pakistan",
       "country:vietnam": "Vietnam",
       "country:europe": "Europe",
-      "fairtrade:yes": "Fair Trade"
+      "country:colombia": "Colombia",
+      "fairtrade:yes": "Fair Trade",
+      "indigenous:yes": "Indigenous-made"
     };
 
     const matchesCut = (card, cut) => {
       if (!cut) return true;
       const [key, value] = cut.split(":");
-      const attr = key === "fairtrade" ? "data-fairtrade" : key === "country" ? "data-country" : "data-fabric";
+      const attr = key === "fairtrade" ? "data-fairtrade" : key === "country" ? "data-country" : key === "indigenous" ? "data-indigenous" : "data-fabric";
       const raw = (card.getAttribute(attr) || "").split(/\s+/).filter(Boolean);
       return raw.includes(value);
     };
