@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#0b0a08">
-  <meta name="description" content="Victoria Imtanes — @mamamastermind. Music, podcast, comedy, Tesla rentals, hemp, and healing.">
+  <meta name="description" content="Victoria Imtanes — @mamamastermind. PLAInow, PLAIGROUND, EKOTOPIA organic goods, comedy, Tesla rentals, and healing.">
   <title>Victoria Imtanes · @mamamastermind</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -187,6 +187,75 @@
       opacity: 1;
       transform: translateX(-50%) translateY(0);
     }
+
+    .new {
+      margin-left: 8px;
+      border: 1px solid var(--gold);
+      color: var(--ink);
+      background: var(--gold);
+      border-radius: 999px;
+      padding: 2px 7px;
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      vertical-align: 1px;
+    }
+
+    a.btn.feature {
+      min-height: 76px;
+      border-color: var(--gold);
+      background: linear-gradient(180deg, #221d13, #15120c);
+      box-shadow: 0 0 0 4px var(--gold-dim);
+    }
+
+    a.btn.feature strong { font-size: 18px; color: var(--gold-soft); }
+
+    .btn .blurb {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+    }
+
+    .btn .arrow {
+      color: var(--gold);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .sub {
+      display: block;
+      margin: 6px 0 8px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+    }
+
+    .chips {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    a.pill {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #13110d;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-align: center;
+      transition: border-color 0.2s ease;
+    }
+
+    a.pill:hover, a.pill:focus-visible { border-color: var(--gold); }
   </style>
 </head>
 <body>
@@ -201,14 +270,39 @@
     <section>
       <span class="label">LISTEN / WATCH</span>
       <div class="stack">
-        <a class="btn" href="https://wannaplai.com" target="_blank" rel="noopener noreferrer">
-          <span><strong>PLAIGROUND</strong></span>
-          <span class="right"><span class="meta">music</span></span>
+        <a class="btn feature" href="https://www.plainow.com/" target="_blank" rel="noopener noreferrer">
+          <span><strong>PLAInow <span class="new">NEW</span></strong><span class="blurb">Free listening across human music, AI music, festivals, and history.</span></span>
+          <span class="arrow" aria-hidden="true">&rsaquo;</span>
         </a>
-        <a class="btn" href="https://www.weast.stream" target="_blank" rel="noopener noreferrer">
-          <span><strong>WEAST</strong></span>
-          <span class="right"><span class="meta">podcast</span></span>
+        <a class="btn" href="https://www.plainow.com/human" target="_blank" rel="noopener noreferrer">
+          <span><strong>Human</strong><span class="blurb">Real artists, real stages, real recordings.</span></span>
+          <span class="arrow" aria-hidden="true">&rsaquo;</span>
         </a>
+        <a class="btn" href="https://www.plainow.com/festivals/major" target="_blank" rel="noopener noreferrer">
+          <span><strong>Festivals</strong><span class="blurb">Browse the big lineups by genre.</span></span>
+          <span class="arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+        <a class="btn" href="https://www.plainow.com/archive/explore" target="_blank" rel="noopener noreferrer">
+          <span><strong>From the Archives</strong><span class="blurb">Spin the year wheel and hear any decade.</span></span>
+          <span class="arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+        <a class="btn" href="https://www.plainow.com/video" target="_blank" rel="noopener noreferrer">
+          <span><strong>Video <span class="new">NEW</span></strong><span class="blurb">Free movies, comedy, cartoons, and newsreels, all from official sources.</span></span>
+          <span class="arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+      </div>
+      <span class="sub">PLAINOW VIDEO</span>
+      <div class="chips">
+          <a class="pill" href="https://www.plainow.com/video/movies" target="_blank" rel="noopener noreferrer">Movies</a>
+          <a class="pill" href="https://www.plainow.com/video/comedy" target="_blank" rel="noopener noreferrer">Comedy</a>
+          <a class="pill" href="https://www.plainow.com/video/philosophy" target="_blank" rel="noopener noreferrer">Philosophy</a>
+          <a class="pill" href="https://www.plainow.com/video/cartoons" target="_blank" rel="noopener noreferrer">Cartoons</a>
+          <a class="pill" href="https://www.plainow.com/video/silent-films" target="_blank" rel="noopener noreferrer">Silent Films</a>
+          <a class="pill" href="https://www.plainow.com/video/newsreels" target="_blank" rel="noopener noreferrer">Newsreels</a>
+          <a class="pill" href="https://www.plainow.com/video/free-youtube" target="_blank" rel="noopener noreferrer">Free on YouTube</a>
+          <a class="pill" href="https://www.plainow.com/video/edutainment" target="_blank" rel="noopener noreferrer">Edutainment</a>
+      </div>
+      <div class="stack" style="margin-top: 10px;">
         <a class="btn" href="/grokgirl/">
           <span><strong>Grok Girl</strong></span>
           <span class="right"><span class="meta">comedy</span></span>
@@ -217,15 +311,31 @@
     </section>
 
     <section>
-      <span class="label">DOOBIELANDIA</span>
+      <span class="label">RELEASE</span>
       <div class="stack">
-        <a class="btn" href="https://www.youtube.com/@doobielandia" target="_blank" rel="noopener noreferrer">
-          <span><strong>YouTube</strong></span>
-          <span class="right"><span class="meta">@doobielandia</span></span>
+        <a class="btn feature" href="https://www.wannaplai.com/" target="_blank" rel="noopener noreferrer">
+          <span><strong>PLAIGROUND</strong><span class="blurb">Release your music free. Distribution is $2.49 a song, and you only pay when you release.</span></span>
+          <span class="arrow" aria-hidden="true">&rsaquo;</span>
         </a>
-        <a class="btn" href="/powerplant/">
-          <span><strong>Hemp</strong></span>
-          <span class="right"><span class="meta">hub</span></span>
+        <a class="btn" href="https://www.wannaplai.com/how-it-works.html" target="_blank" rel="noopener noreferrer">
+          <span><strong>How it works</strong><span class="blurb">Upload, get it on the stores, then grow it.</span></span>
+          <span class="arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+        <a class="btn" href="https://www.wannaplai.com/ar.html" target="_blank" rel="noopener noreferrer">
+          <span><strong>A&R Act Pack</strong><span class="blurb">$149: your artist kit, hosted EPK, and a release check in one pass.</span></span>
+          <span class="arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+        <a class="btn" href="https://www.wannaplai.com/epk.html" target="_blank" rel="noopener noreferrer">
+          <span><strong>Electronic press kit</strong><span class="blurb">From $79: a press-ready artist page you can send to anyone.</span></span>
+          <span class="arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+        <a class="btn" href="https://www.wannaplai.com/transparency.html" target="_blank" rel="noopener noreferrer">
+          <span><strong>Honest labels</strong><span class="blurb">How PLAIGROUND tells human music and AI music apart.</span></span>
+          <span class="arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+        <a class="btn" href="https://www.instagram.com/plaigroundmusic" target="_blank" rel="noopener noreferrer">
+          <span><strong>Instagram</strong></span>
+          <span class="right"><span class="meta">@plaigroundmusic</span></span>
         </a>
       </div>
     </section>
@@ -233,9 +343,13 @@
     <section>
       <span class="label">SHOP</span>
       <div class="stack">
-        <a class="btn" href="/priceless/">
-          <span><strong>PRICELESS</strong></span>
-          <span class="right"><span class="meta">shop</span></span>
+        <a class="btn" href="https://ekotopia.co/" target="_blank" rel="noopener noreferrer">
+          <span><strong>EKOTOPIA <span class="new">NEW</span></strong><span class="blurb">Organic goods: clothes, baby, household, beauty, and home.</span></span>
+          <span class="arrow" aria-hidden="true">&rsaquo;</span>
+        </a>
+        <a class="btn" href="https://www.instagram.com/ekotopia.co/" target="_blank" rel="noopener noreferrer">
+          <span><strong>Instagram</strong></span>
+          <span class="right"><span class="meta">@ekotopia.co</span></span>
         </a>
       </div>
     </section>
